@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_commerceapp.databinding.ActivityLoginBinding
+import android.content.Intent
 class LoginActivity: AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
@@ -11,6 +12,11 @@ class LoginActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Seleccionar tab Correo por defecto al abrir
+        binding.tabCorreo.isSelected = true
+        binding.tabTelefono.isSelected = false
+
         setupTabs()
         setupButtons()
     }
@@ -36,12 +42,20 @@ class LoginActivity: AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val input = binding.etInput.text.toString().trim()
             val pass  = binding.etPassword.text.toString().trim()
+
             if (input.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Completa todos los campos",
                     Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            // TODO: conectar con Firebase o tu backend
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
+
+        """"    // TODO: conectar con Firebase o tu backend
             Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_SHORT).show()
         }
         binding.btnGoogle.setOnClickListener {
@@ -56,5 +70,6 @@ class LoginActivity: AppCompatActivity() {
         binding.tvForgot.setOnClickListener {
             Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
         }
+        """
     }
 }
