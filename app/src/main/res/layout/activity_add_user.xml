@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1628"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TopBar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:background="#0D2137">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#FFFFFF"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Añadir usuario"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Formulario -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Sección Información personal -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información personal"
+                android:textColor="#1E90FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Nombres -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombres *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Ingreso los nombres"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombres"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Apellidos -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apellidos *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Ingreso los apellidos"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etApellidos"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Correo -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Correo electrónico *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="ejemplo@correo.com"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Teléfono -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Teléfono *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="987 654 321"
+                app:helperText="Formato: 9 dígitos"
+                app:helperTextTextColor="#8899AA"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTelefono"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- DNI -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DNI *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="12345678"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDni"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Fecha de nacimiento -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fecha de nacimiento" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Selecciona la fecha"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/ic_calendar"
+                app:endIconTint="#8899AA"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFechaNacimiento"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Rol -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rol del usuario *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Selecciona un rol"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="16dp">
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerRol"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Sección Estado -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Estado del usuario"
+                android:textColor="#1E90FF" android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estado *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Activo"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="16dp">
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerEstado"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Sección Contraseña -->
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Contraseña"
+                android:textColor="#1E90FF" android:textSize="14sp" android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contraseña temporal *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Mínimo 8 caracteres"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:endIconMode="password_toggle"
+                app:endIconTint="#8899AA"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="4dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="El usuario deberá cambiar la contraseña al iniciar sesión."
+                android:textColor="#8899AA" android:textSize="11sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Botones -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="Guardar usuario"
+                android:textColor="#FFFFFF"
+                app:icon="@drawable/ic_person_add"
+                app:iconTint="#FFFFFF"
+                app:backgroundTint="#1E90FF"
+                app:cornerRadius="10dp"
+                android:layout_marginBottom="10dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="Cancelar"
+                android:textColor="#8899AA"
+                app:strokeColor="#8899AA"
+                app:cornerRadius="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

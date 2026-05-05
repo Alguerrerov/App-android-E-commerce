@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1628">
+
+    <!-- TopBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:background="#0D2137">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/btnBack"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clientes"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+        <ImageButton
+            android:id="@+id/btnFilter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_filter"
+            app:tint="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+    <!-- Buscador -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar clientes..."
+        app:hintTextColor="#8899AA"
+        app:boxStrokeColor="#1E2A45"
+        app:boxBackgroundColor="#0D2137"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="#8899AA"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón Añadir usuario -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Añadir usuario"
+        android:textColor="#FFFFFF"
+        app:icon="@drawable/ic_person_add"
+        app:iconTint="#FFFFFF"
+        app:backgroundTint="#1E90FF"
+        app:cornerRadius="10dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Tabs Todos / Activos / Inactivos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:id="@+id/tabTodos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Todos (1.248)"
+            android:textColor="#1E90FF"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@drawable/tab_selector"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/tabActivos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Activos (1.060)"
+            android:textColor="#8899AA"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@drawable/tab_selector"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/tabInactivos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Inactivos (156)"
+            android:textColor="#8899AA"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@drawable/tab_selector"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Lista de clientes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvClientes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="12dp"/>
+
+    <!-- Paginación -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrando 1-8 de 1.248 clientes"
+        android:textColor="#8899AA"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+</LinearLayout>

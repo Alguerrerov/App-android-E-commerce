@@ -34,6 +34,10 @@
             android:name=".AdminMainActivity"
             android:exported="false"/>
 
+        <activity
+            android:name=".SellerMainActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

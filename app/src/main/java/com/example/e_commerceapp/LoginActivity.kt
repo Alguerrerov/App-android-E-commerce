@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_commerceapp.databinding.ActivityLoginBinding
 import android.content.Intent
+import kotlin.jvm.java
 class LoginActivity: AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
@@ -57,7 +58,7 @@ class LoginActivity: AppCompatActivity() {
             val usuariosPermitidos = listOf(
                 User("admin", "admin", AdminMainActivity::class.java),
                 User("cliente", "cliente",ClientsMainActivity::class.java),
-                User("ventas", "ventas",SellersMainActivity::class.java)
+                User("ventas", "ventas",SellerMainActivity::class.java)
             )
 
             val usuarioEncontrado = usuariosPermitidos.find { it.name == input && it.pass == pass }
