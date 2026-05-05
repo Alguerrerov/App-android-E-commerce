@@ -61,4 +61,22 @@
         android:text="Administrador"
         android:textColor="#8899AA"
         android:textSize="12sp"/>
+
+    <!-- Cerrar sesión -->
+    <TextView
+        android:id="@+id/tvCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar sesión"
+        android:textColor="#E24B4A"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_logout"
+        android:drawablePadding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"/>
+
 </LinearLayout>

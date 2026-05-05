@@ -12,6 +12,7 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import android.content.Intent
 
 class AdminMainActivity : AppCompatActivity() {
 
@@ -47,14 +48,27 @@ class AdminMainActivity : AppCompatActivity() {
                 R.id.nav_dashboard   -> binding.tvTitle.text = "Resumen"
                 R.id.nav_productos   -> binding.tvTitle.text = "Productos"
                 R.id.nav_pedidos     -> binding.tvTitle.text = "Pedidos"
-                R.id.nav_clientes    -> binding.tvTitle.text = "Clientes"
-                R.id.nav_vendedores  -> binding.tvTitle.text = "Vendedores"
+                R.id.nav_clientes    -> binding.tvTitle.text = "Usuarios"
+                R.id.nav_vendedores  -> binding.tvTitle.text = "Tiendas"
                 R.id.nav_promociones -> binding.tvTitle.text = "Promociones"
                 R.id.nav_reportes    -> binding.tvTitle.text = "Reportes"
                 R.id.nav_config      -> binding.tvTitle.text = "Configuración"
             }
             true
         }
+
+        // botón cerrar sesión
+        binding.navView.findViewById<android.widget.TextView>(R.id.tvCerrarSesion)
+            ?.setOnClickListener {
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            }
+
+
+
     }
 
     private fun setupMetrics() {
