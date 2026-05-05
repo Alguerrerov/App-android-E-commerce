@@ -48,28 +48,18 @@ class LoginActivity: AppCompatActivity() {
                     Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                    Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
-        }
 
-        """"    // TODO: conectar con Firebase o tu backend
-            Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_SHORT).show()
+            // Validar credenciales admin
+            if (input == "admin" && pass == "admin") {
+                val intent = Intent(this, AdminMainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Credenciales incorrectas",
+                    Toast.LENGTH_SHORT).show()
+            }
         }
-        binding.btnGoogle.setOnClickListener {
-            Toast.makeText(this, "Google Sign-In próximamente", Toast.LENGTH_SHORT).show()
-        }
-        binding.btnFacebook.setOnClickListener {
-            Toast.makeText(this, "Facebook Login próximamente", Toast.LENGTH_SHORT).show()
-        }
-        binding.llFingerprint.setOnClickListener {
-            Toast.makeText(this, "Huella digital próximamente", Toast.LENGTH_SHORT).show()
-        }
-        binding.tvForgot.setOnClickListener {
-            Toast.makeText(this, "Recuperar contraseña", Toast.LENGTH_SHORT).show()
-        }
-        """
     }
 }

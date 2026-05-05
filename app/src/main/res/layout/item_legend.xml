@@ -1,0 +1,26 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="6dp">
+    <View android:id="@+id/legendColor"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="#EF9F27"
+        android:layout_marginEnd="6dp"/>
+    <TextView android:id="@+id/legendLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Pendientes"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"/>
+    <TextView android:id="@+id/legendCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textColor="#8899AA"
+        android:textSize="12sp"/>
+</LinearLayout>
