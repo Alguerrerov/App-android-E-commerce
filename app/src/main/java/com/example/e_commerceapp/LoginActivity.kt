@@ -50,8 +50,20 @@ class LoginActivity: AppCompatActivity() {
             }
 
             // Validar credenciales admin
-            if (input == "admin" && pass == "admin") {
-                val intent = Intent(this, AdminMainActivity::class.java)
+
+            //////usarios permitidos////
+            data class User(val name: String, val pass: String, val targetActivity: Class<*>)
+
+            val usuariosPermitidos = listOf(
+                User("admin", "admin", AdminMainActivity::class.java),
+                User("cliente", "cliente",ClientsMainActivity::class.java),
+                User("ventas", "ventas",SellersMainActivity::class.java)
+            )
+
+            val usuarioEncontrado = usuariosPermitidos.find { it.name == input && it.pass == pass }
+
+            if (usuarioEncontrado != null) {
+                val intent = Intent(this,usuarioEncontrado.targetActivity )
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
                         Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)

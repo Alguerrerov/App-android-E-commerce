@@ -42,35 +42,40 @@ class AdminMainActivity : AppCompatActivity() {
         binding.btnMenu.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
+
         binding.navView.setNavigationItemSelectedListener { item ->
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             when (item.itemId) {
                 R.id.nav_dashboard   -> binding.tvTitle.text = "Resumen"
                 R.id.nav_productos   -> binding.tvTitle.text = "Productos"
                 R.id.nav_pedidos     -> binding.tvTitle.text = "Pedidos"
-                R.id.nav_clientes    -> binding.tvTitle.text = "Usuarios"
-                R.id.nav_vendedores  -> binding.tvTitle.text = "Tiendas"
+                R.id.nav_clientes    -> binding.tvTitle.text = "Clientes"
+                R.id.nav_vendedores  -> binding.tvTitle.text = "Vendedores"
                 R.id.nav_promociones -> binding.tvTitle.text = "Promociones"
                 R.id.nav_reportes    -> binding.tvTitle.text = "Reportes"
                 R.id.nav_config      -> binding.tvTitle.text = "Configuración"
+
+                // cerrar sesión
+                R.id.nav_cerrar_sesion -> {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                }
             }
             true
         }
 
-        // botón cerrar sesión
-        binding.navView.findViewById<android.widget.TextView>(R.id.tvCerrarSesion)
-            ?.setOnClickListener {
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                        Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-                finish()
-            }
-
-
-
     }
 
+    private fun cerrarSesion() {
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
+    }
     private fun setupMetrics() {
         binding.cardVentas.tvMetricTitle.text   = "Ventas este mes"
         binding.cardVentas.tvMetricValue.text   = "$ 25.450.000"

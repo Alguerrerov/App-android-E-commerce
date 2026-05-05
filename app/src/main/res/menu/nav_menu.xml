@@ -24,4 +24,9 @@
     <item android:id="@+id/nav_config"
         android:icon="@drawable/ic_settings"
         android:title="Configuración"/>
+
+    <!-- AGREGA ESTO AL FINAL -->
+    <item android:id="@+id/nav_cerrar_sesion"
+        android:icon="@drawable/ic_logout"
+        android:title="Cerrar sesión"/>
 </menu>
