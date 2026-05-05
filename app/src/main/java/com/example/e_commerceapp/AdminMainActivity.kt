@@ -49,7 +49,12 @@ class AdminMainActivity : AppCompatActivity() {
                 R.id.nav_dashboard   -> binding.tvTitle.text = "Resumen"
                 R.id.nav_productos   -> binding.tvTitle.text = "Productos"
                 R.id.nav_pedidos     -> binding.tvTitle.text = "Pedidos"
-                R.id.nav_clientes    -> binding.tvTitle.text = "Clientes"
+                //clientes
+                R.id.nav_clientes -> {
+                    binding.tvTitle.text = "Clientes"
+                    startActivity(Intent(this, ClientesActivity::class.java))
+                }
+
                 R.id.nav_vendedores  -> binding.tvTitle.text = "Vendedores"
                 R.id.nav_promociones -> binding.tvTitle.text = "Promociones"
                 R.id.nav_config      -> binding.tvTitle.text = "Configuración"

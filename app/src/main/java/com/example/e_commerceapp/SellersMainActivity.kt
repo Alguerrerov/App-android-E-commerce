@@ -1,11 +1,10 @@
 package com.example.e_commerceapp
-/*
 import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
-import com.example.e_commerceapp.databinding.SellerMainActivityBinding
+import com.example.e_commerceapp.databinding.ActivitySellersMainBinding
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -14,13 +13,14 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import android.content.Intent
 
-class SellerMainActivity : AppCompatActivity() {
+class SellersMainActivity : AppCompatActivity() {
 
-    private lateinit var binding: SellerMainActivity
+    private lateinit var binding: ActivitySellersMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = SellerMainActivityBinding.inflate(layoutInflater)
+        binding = ActivitySellersMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Manejo del botón atrás
@@ -163,4 +163,4 @@ class SellerMainActivity : AppCompatActivity() {
         binding.legendCancelados.legendLabel.text = "Cancelados"
         binding.legendCancelados.legendCount.text = "5"
     }
-*/
+}

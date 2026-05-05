@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0D1B2A"
+    android:padding="40dp">
+
+    <ImageView
+        android:id="@+id/ivFingerprint"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_fingerprint"
+        app:tint="#FFFFFF"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verifica tu huella"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toca el sensor para continuar"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:layout_marginBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/tvUsePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usar contraseña en su lugar"
+        android:textColor="#1E90FF"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</LinearLayout>

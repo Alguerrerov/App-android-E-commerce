@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.e_commerceapp.databinding.ActivityLoginBinding
 import android.content.Intent
 import kotlin.jvm.java
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricManager.Authenticators.*
+import androidx.biometric.BiometricPrompt
+import androidx.core.content.ContextCompat
+
 class LoginActivity: AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
@@ -58,7 +63,7 @@ class LoginActivity: AppCompatActivity() {
             val usuariosPermitidos = listOf(
                 User("admin", "admin", AdminMainActivity::class.java),
                 User("cliente", "cliente",ClientsMainActivity::class.java),
-                User("ventas", "ventas",SellerMainActivity::class.java)
+                User("ventas", "ventas", SellersMainActivity::class.java)
             )
 
             val usuarioEncontrado = usuariosPermitidos.find { it.name == input && it.pass == pass }
@@ -73,6 +78,10 @@ class LoginActivity: AppCompatActivity() {
                 Toast.makeText(this, "Credenciales incorrectas",
                     Toast.LENGTH_SHORT).show()
             }
+        }
+        //Biometria
+        binding.llFingerprint.setOnClickListener {
+            startActivity(Intent(this, FingerprintActivity::class.java))
         }
     }
 }

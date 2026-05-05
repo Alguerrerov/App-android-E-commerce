@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,22 +21,32 @@
             </intent-filter>
         </activity>
 
-        <!-- 2. LoginActivity -->
+        <!-- 2. pantalla login -->
         <activity android:name=".LoginActivity"
             android:exported="false"/>
+        <!-- 2.1 pantalla login fingerprint -->
+
+        <activity android:name=".FingerprintActivity"
+            android:exported="false" />
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
         </activity>
-
+        <!-- 3. admin dashboard -->
         <activity
             android:name=".AdminMainActivity"
             android:exported="false"/>
+        <!--3.1 admin clientes-->
+        <activity android:name=".ClientesActivity" android:exported="false"/>
+        <activity android:name=".AddUserActivity"  android:exported="false"/>
 
+        <!-- vendedor-->
         <activity
-            android:name=".SellerMainActivity"
+            android:name=".SellersMainActivity"
             android:exported="false"/>
+
+
 
     </application>
 
