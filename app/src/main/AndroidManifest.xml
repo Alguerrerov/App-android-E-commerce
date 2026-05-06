@@ -41,6 +41,12 @@
         <activity android:name=".ClientesActivity" android:exported="false"/>
         <activity android:name=".AddUserActivity"  android:exported="false"/>
 
+        <!--3.2 admin productos-->
+        <activity android:name=".ProductosActivity"       android:exported="false"/>
+        <activity android:name=".DetalleProductoActivity"  android:exported="false"/>
+        <activity android:name=".AgregarProductoActivity"  android:exported="false"/>
+        <activity android:name=".AgregarProductoFotosActivity" android:exported="false"/>
+
         <!-- vendedor-->
         <activity
             android:name=".SellersMainActivity"

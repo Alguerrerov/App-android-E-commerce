@@ -47,7 +47,12 @@ class AdminMainActivity : AppCompatActivity() {
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             when (item.itemId) {
                 R.id.nav_dashboard   -> binding.tvTitle.text = "Resumen"
-                R.id.nav_productos   -> binding.tvTitle.text = "Productos"
+                //productos
+                R.id.nav_productos -> {
+                    binding.tvTitle.text = "Productos"
+                    startActivity(Intent(this, ProductosActivity::class.java))
+                }
+                //pedidos
                 R.id.nav_pedidos     -> binding.tvTitle.text = "Pedidos"
                 //clientes
                 R.id.nav_clientes -> {
