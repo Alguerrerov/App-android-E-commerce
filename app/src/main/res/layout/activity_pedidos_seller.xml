@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:marginHorizontal="16dp"
+        android:layout_marginHorizontal="16dp"
         android:background="#1E2D3D"
         android:paddingHorizontal="12dp"
         android:paddingVertical="8dp"
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Buscar pedidos..."
-            android:hintTextColor="#8899AA"
             android:textColor="#FFFFFF"
+            android:textColorHint="#8899AA"
             android:background="@null"/>
 
         <TextView

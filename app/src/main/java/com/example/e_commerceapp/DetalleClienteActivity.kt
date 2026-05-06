@@ -28,16 +28,6 @@ class DetalleClienteActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener { finish() }
 
-        // Botón opciones (3 puntos) → abre pantalla CRUD
-        binding.btnOpciones.setOnClickListener {
-            val intent = Intent(this, OpcionesClienteActivity::class.java)
-            intent.putExtra("nombre", nombre)
-            intent.putExtra("email",  email)
-            intent.putExtra("rol",    rol)
-            intent.putExtra("estado", estado)
-            startActivity(intent)
-        }
-
         // Botón editar → también abre opciones
         binding.btnEditar.setOnClickListener {
             val intent = Intent(this, OpcionesClienteActivity::class.java)

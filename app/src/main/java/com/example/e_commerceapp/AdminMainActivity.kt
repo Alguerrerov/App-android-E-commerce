@@ -53,7 +53,9 @@ class AdminMainActivity : AppCompatActivity() {
                     startActivity(Intent(this, ProductosActivity::class.java))
                 }
                 //pedidos
-                R.id.nav_pedidos     -> binding.tvTitle.text = "Pedidos"
+                R.id.nav_pedidos -> {
+                    startActivity(Intent(this, PedidosAdminActivity::class.java))
+                }
                 //clientes
                 R.id.nav_clientes -> {
                     binding.tvTitle.text = "Clientes"

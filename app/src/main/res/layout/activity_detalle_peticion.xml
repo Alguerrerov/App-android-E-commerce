@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D1B2A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="←"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Detalle de petición"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Tipo y estado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1E2D3D"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvVendedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8899AA"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tvFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8899AA"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"/>
+        </LinearLayout>
+
+        <!-- Info vendedor -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información del vendedor"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1E2D3D"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="👤"
+                android:textSize="22sp"
+                android:background="#2E3D4D"
+                android:layout_marginEnd="12dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNombreVendedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tvEmailVendedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8899AA"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tvTelefonoVendedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8899AA"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ Vendedor verificado"
+                android:textColor="#4CAF50"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Info tienda (creación) -->
+        <LinearLayout
+            android:id="@+id/layoutInfoTienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información de la tienda"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E2D3D"
+                android:padding="14dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Nombre de la tienda"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvNombreTienda" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Categoría"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvCategoriaTienda" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Dirección"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDireccionTienda" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Descripción"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDescripcionTienda" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF"
+                        android:textSize="13sp" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Cambios solicitados (modificación) -->
+        <LinearLayout
+            android:id="@+id/layoutCambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambios solicitados"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E2D3D"
+                android:padding="14dp">
+
+                <!-- Encabezado tabla -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text=""
+                        android:textColor="#8899AA" android:textSize="12sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Información actual"
+                        android:textColor="#8899AA" android:textSize="12sp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Información solicitada"
+                        android:textColor="#8899AA" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <!-- Filas dinámicas -->
+                <LinearLayout
+                    android:id="@+id/tablaCambios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motivo de la modificación"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvMotivoCambio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:background="#1E2D3D"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Info producto nuevo -->
+        <LinearLayout
+            android:id="@+id/layoutProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información del producto"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E2D3D"
+                android:padding="14dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Nombre del producto"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvNombreProducto" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Categoría"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvCategoriaProducto" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Marca"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvMarca" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="SKU"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvSku" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Precio"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvPrecioProducto" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Stock inicial"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvStockProducto" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Descripción"
+                        android:textColor="#8899AA" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDescripcionProducto" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:textColor="#FFFFFF" android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Notas del vendedor -->
+        <LinearLayout
+            android:id="@+id/layoutNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notas del vendedor"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvNotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:background="#1E2D3D"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Actualizar estado -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar estado"
+            android:textColor="#1E90FF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E2D3D"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar estado"
+            android:backgroundTint="#1E90FF"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textColor="#AAAAAA"
+            android:gravity="center"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+</ScrollView>
