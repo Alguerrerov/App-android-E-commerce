@@ -47,15 +47,18 @@
         <activity android:name=".AgregarProductoActivity"  android:exported="false"/>
         <activity android:name=".AgregarProductoFotosActivity" android:exported="false"/>
 
-        <!-- vendedor-->
+        <!--4. vendedor-->
         <activity
             android:name=".SellersMainActivity"
             android:exported="false"/>
-        <!-- vendedor productos-->
+        <!--4.1 vendedor productos-->
         <activity android:name=".ProductosSellerActivity" android:exported="false"/>
         <activity android:name=".DetalleProductoSellerActivity" android:exported="false"/>
         <activity android:name=".AgregarProductoSellerActivity" android:exported="false"/>
         <activity android:name=".AgregarProductoFotosSellerActivity" android:exported="false"/>
+        <!--4.2 vendedor pedidos-->
+        <activity android:name=".PedidosSellerActivity" />
+        <activity android:name=".DetallePedidoSellerActivity" />
 
 
 

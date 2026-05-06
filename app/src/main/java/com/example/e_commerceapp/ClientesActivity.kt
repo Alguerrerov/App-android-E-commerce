@@ -1,10 +1,10 @@
 package com.example.e_commerceapp
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerceapp.databinding.ActivityClientesBinding
 
-// Modelo de datos
+// Modelo
 data class Cliente(
     val nombre: String,
     val email: String,
@@ -22,16 +22,21 @@ data class Cliente(
     val estado: String
 )
 
-// Adapter del RecyclerView
+// Adapter
 class ClientesAdapter(
-    private var lista: List<Cliente>
+    private var lista: List<Cliente>,
+    private val onClick: (Cliente) -> Unit
 ) : RecyclerView.Adapter<ClientesAdapter.ViewHolder>() {
 
+    companion object {
+        var clientesOriginales: List<Cliente> = emptyList()
+    }
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvNombre:  TextView = view.findViewById(R.id.tvNombre)
-        val tvEmail:   TextView = view.findViewById(R.id.tvEmail)
-        val tvRol:     TextView = view.findViewById(R.id.tvRol)
-        val tvEstado:  TextView = view.findViewById(R.id.tvEstado)
+        val tvNombre: TextView = view.findViewById(R.id.tvNombre)
+        val tvEmail:  TextView = view.findViewById(R.id.tvEmail)
+        val tvRol:    TextView = view.findViewById(R.id.tvRol)
+        val tvEstado: TextView = view.findViewById(R.id.tvEstado)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -46,52 +51,48 @@ class ClientesAdapter(
         holder.tvEmail.text  = cliente.email
         holder.tvRol.text    = cliente.rol
         holder.tvEstado.text = cliente.estado
-        // Color del badge según estado
         when (cliente.estado) {
             "Activo"    -> holder.tvEstado.setTextColor(Color.parseColor("#4CAF50"))
             "Inactivo"  -> holder.tvEstado.setTextColor(Color.parseColor("#8899AA"))
             "Pendiente" -> holder.tvEstado.setTextColor(Color.parseColor("#EF9F27"))
             "Bloqueado" -> holder.tvEstado.setTextColor(Color.parseColor("#E24B4A"))
         }
+        holder.itemView.setOnClickListener { onClick(cliente) }
     }
 
-    override fun getItemCount() = lista.size
+    override fun getItemCount(): Int = lista.size
 
     fun filtrar(texto: String) {
         lista = if (texto.isEmpty()) clientesOriginales
         else clientesOriginales.filter {
             it.nombre.contains(texto, ignoreCase = true) ||
-                    it.email.contains(texto,  ignoreCase = true)
+                    it.email.contains(texto, ignoreCase = true)
         }
         notifyDataSetChanged()
     }
-
-    companion object {
-        var clientesOriginales: List<Cliente> = emptyList()
-    }
 }
 
+// Activity
 class ClientesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityClientesBinding
     private lateinit var adapter: ClientesAdapter
 
     private val clientes = listOf(
-        Cliente("Juan Pérez",    "juanperez@gmail.com",    "Cliente",  "Activo"),
-        Cliente("María Gómez",   "mariagomez@gmail.com",   "Vendedor", "Activo"),
-        Cliente("Carlos López",  "carloslopez@gmail.com",  "Cliente",  "Activo"),
-        Cliente("Ana Torres",    "anatorres@gmail.com",    "Vendedora","Pendiente"),
-        Cliente("Luis Martínez", "luismartinez@gmail.com", "Cliente",  "Bloqueado"),
-        Cliente("Pedro Ramírez", "pedroramirez@gmail.com", "Vendedor", "Activo"),
-        Cliente("Laura Sánchez", "laurasanchez@gmail.com", "Cliente",  "Activo"),
-        Cliente("Diego Herrera", "diegoherrera@gmail.com", "Cliente",  "Inactivo")
+        Cliente("Juan Pérez",    "juanperez@gmail.com",    "Cliente",   "Activo"),
+        Cliente("María Gómez",   "mariagomez@gmail.com",   "Vendedor",  "Activo"),
+        Cliente("Carlos López",  "carloslopez@gmail.com",  "Cliente",   "Activo"),
+        Cliente("Ana Torres",    "anatorres@gmail.com",    "Vendedora", "Pendiente"),
+        Cliente("Luis Martínez", "luismartinez@gmail.com", "Cliente",   "Bloqueado"),
+        Cliente("Pedro Ramírez", "pedroramirez@gmail.com", "Vendedor",  "Activo"),
+        Cliente("Laura Sánchez", "laurasanchez@gmail.com", "Cliente",   "Activo"),
+        Cliente("Diego Herrera", "diegoherrera@gmail.com", "Cliente",   "Inactivo")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityClientesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setupRecyclerView()
         setupBuscador()
         setupBotones()
@@ -99,7 +100,14 @@ class ClientesActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         ClientesAdapter.clientesOriginales = clientes
-        adapter = ClientesAdapter(clientes)
+        adapter = ClientesAdapter(clientes) { cliente ->
+            val intent = Intent(this, DetalleClienteActivity::class.java)
+            intent.putExtra("nombre", cliente.nombre)
+            intent.putExtra("email",  cliente.email)
+            intent.putExtra("rol",    cliente.rol)
+            intent.putExtra("estado", cliente.estado)
+            startActivity(intent)
+        }
         binding.rvClientes.layoutManager = LinearLayoutManager(this)
         binding.rvClientes.adapter = adapter
     }
