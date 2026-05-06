@@ -5,18 +5,16 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.e_commerceapp.databinding.ActivityProductosBinding
+import com.example.e_commerceapp.databinding.ActivityProductosSellerBinding
 
-class ProductosActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityProductosBinding
+
+class ProductosSellerActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityProductosSellerBinding
     private lateinit var adapter: ProductosAdapter
 
     private val productos = listOf(
@@ -30,7 +28,7 @@ class ProductosActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProductosBinding.inflate(layoutInflater)
+        binding = ActivityProductosSellerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupRecyclerView()
         setupBuscador()
@@ -41,12 +39,14 @@ class ProductosActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         ProductosAdapter.productosOriginales = productos
         adapter = ProductosAdapter(productos) { producto ->
-            val intent = Intent(this, DetalleProductoActivity::class.java)
+            val intent = Intent(this, DetalleProductoSellerActivity::class.java)
             intent.putExtra("nombre",    producto.nombre)
             intent.putExtra("categoria", producto.categoria)
             intent.putExtra("precio",    producto.precio)
             intent.putExtra("stock",     producto.stock)
             intent.putExtra("estado",    producto.estado)
+            intent.putExtra("vendedor", "Carlos López")
+            intent.putExtra("tienda", "AutoParts Store Central")
             startActivity(intent)
         }
         binding.rvProductos.layoutManager = LinearLayoutManager(this)
@@ -86,7 +86,7 @@ class ProductosActivity : AppCompatActivity() {
     private fun setupBotones() {
         binding.btnBack.setOnClickListener { finish() }
         binding.btnNuevoProducto.setOnClickListener {
-            startActivity(Intent(this, AgregarProductoActivity::class.java))
+            startActivity(Intent(this, AgregarProductoSellerActivity::class.java))
         }
     }
 }

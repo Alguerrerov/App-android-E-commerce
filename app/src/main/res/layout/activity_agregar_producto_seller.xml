@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1628">
+
+    <!-- TopBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:background="#0D2137">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Agregar producto"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Indicador de pasos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Paso 1 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/step1Circle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/step_active"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información"
+                android:textColor="#1E90FF"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Línea -->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="#1E90FF"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Paso 2 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/step2Circle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="2"
+                android:textColor="#8899AA"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/step_inactive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotos"
+                android:textColor="#8899AA"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Línea -->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="#1E2A45"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Paso 3 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="3"
+                android:textColor="#8899AA"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/step_inactive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen"
+                android:textColor="#8899AA"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Contenido scrolleable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Sección info básica -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información básica"
+                android:textColor="#1E90FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- Nombre -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nombre del producto *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Categoría dropdown -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Categoría *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Marca -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Marca *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMarca"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Precio -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precio (S/.) *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPrecio"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Stock -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stock disponible *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:helperText="Cantidad de unidades disponibles"
+                app:helperTextTextColor="#8899AA"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="12dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etStock"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Descripción -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Descripción *" android:textColor="#FFFFFF" android:textSize="12sp" android:layout_marginBottom="4dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="500"
+                app:hintTextColor="#8899AA" app:boxStrokeColor="#1E90FF"
+                app:boxBackgroundColor="#0D2137"
+                app:boxCornerRadiusTopStart="8dp" app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp" app:boxCornerRadiusBottomEnd="8dp"
+                android:layout_marginBottom="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescripcion"
+                    android:layout_width="match_parent" android:layout_height="120dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:maxLength="500"
+                    android:textColor="#FFFFFF"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón Siguiente -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Siguiente"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#1E90FF"
+        app:cornerRadius="0dp"
+        android:layout_margin="0dp"/>
+
+</LinearLayout>

@@ -46,12 +46,22 @@ class SellersMainActivity : AppCompatActivity() {
         binding.navView.setNavigationItemSelectedListener { item ->
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             when (item.itemId) {
+                //reporte
                 R.id.nav_dashboard   -> binding.tvTitle.text = "Resumen"
-                R.id.nav_productos   -> binding.tvTitle.text = "Productos"
+                //productos
+                R.id.nav_productos -> {
+                    binding.tvTitle.text = "Productos"
+                    startActivity(Intent(this, ProductosSellerActivity::class.java))
+                }
+                //pedidos
                 R.id.nav_pedidos     -> binding.tvTitle.text = "Pedidos"
+                //clientes
                 R.id.nav_clientes    -> binding.tvTitle.text = "Clientes"
+                //vendedores
                 R.id.nav_vendedores  -> binding.tvTitle.text = "Vendedores"
+                //promociones
                 R.id.nav_promociones -> binding.tvTitle.text = "Promociones"
+                //configuración
                 R.id.nav_config      -> binding.tvTitle.text = "Configuración"
 
                 // cerrar sesión

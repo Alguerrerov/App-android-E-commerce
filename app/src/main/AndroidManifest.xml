@@ -51,6 +51,12 @@
         <activity
             android:name=".SellersMainActivity"
             android:exported="false"/>
+        <!-- vendedor productos-->
+        <activity android:name=".ProductosSellerActivity" android:exported="false"/>
+        <activity android:name=".DetalleProductoSellerActivity" android:exported="false"/>
+        <activity android:name=".AgregarProductoSellerActivity" android:exported="false"/>
+        <activity android:name=".AgregarProductoFotosSellerActivity" android:exported="false"/>
+
 
 
 
