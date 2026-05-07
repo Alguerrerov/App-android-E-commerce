@@ -69,3 +69,4 @@ class ProductosAdapter(
         var productosOriginales: List<Producto> = emptyList()
     }
 }
+

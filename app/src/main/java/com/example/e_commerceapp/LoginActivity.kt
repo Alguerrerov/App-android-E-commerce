@@ -62,7 +62,7 @@ class LoginActivity: AppCompatActivity() {
 
             val usuariosPermitidos = listOf(
                 User("admin", "admin", AdminMainActivity::class.java),
-                User("cliente", "cliente",ClientsMainActivity::class.java),
+                User("user", "user",ClientsMainActivity::class.java),
                 User("ventas", "ventas", SellersMainActivity::class.java)
             )
 

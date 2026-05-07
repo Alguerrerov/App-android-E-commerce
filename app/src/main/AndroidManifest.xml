@@ -42,18 +42,15 @@
         <activity android:name=".AddUserActivity"  android:exported="false"/>
         <activity android:name=".DetalleClienteActivity"  android:exported="false"/>
         <activity android:name=".OpcionesClienteActivity" android:exported="false"/>
-
         <!--3.2 admin productos-->
         <activity android:name=".ProductosActivity"       android:exported="false"/>
         <activity android:name=".DetalleProductoActivity"  android:exported="false"/>
         <activity android:name=".AgregarProductoActivity"  android:exported="false"/>
         <activity android:name=".AgregarProductoFotosActivity" android:exported="false"/>
-
         <!--3.3 admin pedidos-->
         <activity android:name=".PedidosAdminActivity" />
         <activity android:name=".DetallePeticionActivity" />
         <activity android:name=".DetallePedidoAdminActivity" />
-
 
         <!--4. vendedor-->
         <activity
@@ -67,6 +64,9 @@
         <!--4.2 vendedor pedidos-->
         <activity android:name=".PedidosSellerActivity" />
         <activity android:name=".DetallePedidoSellerActivity" />
+        <!--4.3 vendedor clientes-->
+        <activity android:name=".ClientesSellerActivity" />
+        <activity android:name=".DetalleClienteSellerActivity" />
 
 
 

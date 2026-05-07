@@ -59,7 +59,10 @@ class SellersMainActivity : AppCompatActivity() {
                     startActivity(Intent(this, PedidosSellerActivity::class.java))
                 }
                 //clientes
-                R.id.nav_clientes    -> binding.tvTitle.text = "Clientes"
+                R.id.nav_clientes -> {
+                    binding.tvTitle.text = "Clientes"
+                    startActivity(Intent(this, ClientesSellerActivity::class.java))
+                }
                 //vendedores
                 R.id.nav_vendedores  -> binding.tvTitle.text = "Vendedores"
                 //promociones

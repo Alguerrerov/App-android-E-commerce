@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1B2A">
+
+    <!-- Buscador -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1E2D3D"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_vertical"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔍 "
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Buscar clientes..."
+            android:textColorHint="#8899AA"
+            android:textColor="#FFFFFF"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚡"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tabTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todos (248)"
+            android:textColor="#1E90FF"
+            android:textSize="13sp"
+            android:paddingBottom="6dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/tabActivos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activos (210)"
+            android:textColor="#8899AA"
+            android:textSize="13sp"
+            android:paddingBottom="6dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/tabInactivos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inactivos (38)"
+            android:textColor="#8899AA"
+            android:textSize="13sp"
+            android:paddingBottom="6dp"/>
+    </LinearLayout>
+
+    <!-- Lista -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvClientes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false"/>
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrando 1-6 de 248 clientes"
+        android:textColor="#8899AA"
+        android:textSize="12sp"
+        android:padding="16dp"/>
+
+</LinearLayout>
