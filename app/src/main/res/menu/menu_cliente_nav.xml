@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_cli_inicio"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Inicio"/>
+    <item android:id="@+id/nav_cli_pedidos"
+        android:icon="@drawable/ic_orders"
+        android:title="Mis pedidos"/>
+    <item android:id="@+id/nav_cli_vehiculo"
+        android:icon="@drawable/ic_car"
+        android:title="Mi vehículo"/>
+    <item android:id="@+id/nav_cli_favoritos"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favoritos"/>
+    <item android:id="@+id/nav_cli_tiendas"
+        android:icon="@drawable/ic_store"
+        android:title="Tiendas cercanas"/>
+    <item android:id="@+id/nav_cli_ofertas"
+        android:icon="@drawable/ic_promo"
+        android:title="Ofertas y promociones"/>
+    <item android:id="@+id/nav_cli_soporte"
+        android:icon="@drawable/ic_support"
+        android:title="Soporte"/>
+    <item android:id="@+id/nav_cli_cerrar"
+        android:icon="@drawable/ic_logout"
+        android:title="Cerrar Sesión"/>
+</menu>

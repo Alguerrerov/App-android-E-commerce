@@ -62,7 +62,7 @@ class LoginActivity: AppCompatActivity() {
 
             val usuariosPermitidos = listOf(
                 User("admin", "admin", AdminMainActivity::class.java),
-                User("user", "user",ClientsMainActivity::class.java),
+                User("user", "user", ClientsMainActivity::class.java),
                 User("ventas", "ventas", SellersMainActivity::class.java)
             )
 
@@ -79,9 +79,17 @@ class LoginActivity: AppCompatActivity() {
                     Toast.LENGTH_SHORT).show()
             }
         }
+
+        //olvide mi contraseña
+        binding.tvForgot.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
+        }
+
         //Biometria
         binding.llFingerprint.setOnClickListener {
             startActivity(Intent(this, FingerprintActivity::class.java))
         }
+
+
     }
 }

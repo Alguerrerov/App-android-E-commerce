@@ -25,9 +25,10 @@
         <activity android:name=".LoginActivity"
             android:exported="false"/>
         <!-- 2.1 pantalla login fingerprint -->
-
         <activity android:name=".FingerprintActivity"
             android:exported="false" />
+        <!-- 2.2 pantalla login forgot password -->
+        <activity android:name=".ForgotPasswordActivity" />
 
         <activity
             android:name=".MainActivity"
@@ -67,6 +68,11 @@
         <!--4.3 vendedor clientes-->
         <activity android:name=".ClientesSellerActivity" />
         <activity android:name=".DetalleClienteSellerActivity" />
+
+        <!--5. cliente-->
+        <activity android:name=".ClientsMainActivity" android:exported="false"/>
+        <!--5.1 cliente catalogo-->
+        <activity android:name=".CatalogoActivity" android:exported="false"/>
 
 
 
