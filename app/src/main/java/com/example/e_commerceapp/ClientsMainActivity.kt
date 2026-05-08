@@ -101,5 +101,37 @@ class ClientsMainActivity : AppCompatActivity() {
             intent.putExtra("categoria", "Aceites")
             startActivity(intent)
         }
+
+
+        //categoria menu botom
+        // Bottom Navigation
+        binding.bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_inicio -> {
+                    true
+                }
+                //categoria menu botom
+                R.id.nav_categorias -> {
+                    startActivity(Intent(this, CatalogoActivity::class.java))
+                    true
+                }
+                //navbar buscar
+                R.id.nav_buscar -> {
+                    startActivity(Intent(this, BusquedaActivity::class.java))
+                    true
+                }
+                //carrito menu botom
+                R.id.nav_carrito -> {
+                    startActivity(Intent(this, CarritoActivity::class.java))
+                    true
+                }
+                //perfil
+                R.id.nav_perfil -> {
+                    Toast.makeText(this, "Perfil próximamente", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }

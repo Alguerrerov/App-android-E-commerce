@@ -73,6 +73,15 @@
         <activity android:name=".ClientsMainActivity" android:exported="false"/>
         <!--5.1 cliente catalogo-->
         <activity android:name=".CatalogoActivity" android:exported="false"/>
+        <!---5.2 cliente busqueda-->
+        <activity android:name=".BusquedaActivity" android:exported="false"/>
+        <!--5.3 cliente detalle producto-->
+        <activity android:name=".DetalleProductoClienteActivity" android:exported="false"/>
+        <!--5.4 cliente carrito-->
+        <activity android:name=".CarritoActivity" android:exported="false"/>
+        <!--5.5 cliente resumen compra-->
+        <activity android:name=".ResumenCompraActivity" android:exported="false"/>
+
 
 
 

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1628">
+
+    <!-- TopBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp"
+        android:background="#1E90FF">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#FFFFFF"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Detalles del producto"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Imagen producto + controles -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="#0D2137">
+
+                <ImageView
+                    android:id="@+id/ivProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_products"
+                    app:tint="#8899AA"
+                    android:scaleType="centerInside"
+                    android:padding="20dp"/>
+
+                <!-- Contador de fotos -->
+                <TextView
+                    android:id="@+id/tvContadorFotos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1/5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:background="#66000000"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="12dp"/>
+
+                <!-- Botones compartir y favorito -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="8dp">
+                    <ImageButton
+                        android:id="@+id/btnCompartir"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_share"
+                        app:tint="#FFFFFF"
+                        android:background="#44000000"
+                        android:layout_marginEnd="6dp"/>
+                    <ImageButton
+                        android:id="@+id/btnFavorito"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_favorite"
+                        app:tint="#FFFFFF"
+                        android:background="#44000000"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Contenido principal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Nombre -->
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pastillas de freno"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Rating estrellas -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView
+                        android:id="@+id/tvEstrellas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="★★★★☆"
+                        android:textColor="#EF9F27"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/tvRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 4.5 (128)"
+                        android:textColor="#8899AA"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <!-- Precio -->
+                <TextView
+                    android:id="@+id/tvPrecio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$XX.XXX"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <!-- Stock -->
+                <TextView
+                    android:id="@+id/tvStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En stock"
+                    android:textColor="#4CAF50"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E2A45"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Compatibilidad -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="compatibilidad"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvCompatibilidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="vehículo 1\nvehículo 2"
+                    android:textColor="#8899AA"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1E2A45"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Cantidad -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cantidad"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <!-- Botón menos -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMenos"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="-"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:backgroundTint="#0D2137"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="#1E2A45"
+                        app:strokeWidth="1dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:textStyle="bold"/>
+
+                    <!-- Cantidad actual -->
+                    <TextView
+                        android:id="@+id/tvCantidad"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="8dp"/>
+
+                    <!-- Botón más -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMas"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="+"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        app:backgroundTint="#0D2137"
+                        app:cornerRadius="8dp"
+                        app:strokeColor="#1E2A45"
+                        app:strokeWidth="1dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:textStyle="bold"/>
+
+                    <!-- Botón agregar al carrito -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAgregarCarrito"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="agregar al carrito"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        app:backgroundTint="#1E90FF"
+                        app:cornerRadius="8dp"
+                        android:layout_marginStart="12dp"/>
+
+                </LinearLayout>
+
+                <!-- Botón proceder al pago -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPagar"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Proceder al pago"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EF9F27"
+                    app:cornerRadius="10dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

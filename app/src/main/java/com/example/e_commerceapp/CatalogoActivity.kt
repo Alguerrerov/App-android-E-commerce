@@ -143,14 +143,18 @@ class CatalogoActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT).show()
             },
             onClick = { producto ->
-                Toast.makeText(this, producto.nombre, Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, DetalleProductoClienteActivity::class.java)
+                intent.putExtra("nombre",  producto.nombre)
+                intent.putExtra("precio",  "$${String.format("%,.0f", producto.precio)}")
+                intent.putExtra("rating",  producto.rating)
+                intent.putExtra("enStock", producto.enStock)
+                startActivity(intent)
             }
         )
         binding.rvCatalogo.layoutManager = GridLayoutManager(this, 2)
         binding.rvCatalogo.adapter = adapter
         binding.tvResultados.text = "${productos.size} productos encontrados"
 
-        // ← AGREGA ESTO AL FINAL
         val categoriaInicial = intent.getStringExtra("categoria")
         if (!categoriaInicial.isNullOrEmpty()) {
             adapter.filtrarPorCategoria(categoriaInicial)
