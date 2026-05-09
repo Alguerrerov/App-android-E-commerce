@@ -81,6 +81,27 @@
         <activity android:name=".CarritoActivity" android:exported="false"/>
         <!--5.5 cliente resumen compra-->
         <activity android:name=".ResumenCompraActivity" android:exported="false"/>
+        <!--5.6 perfil-->
+        <activity android:name=".PerfilActivity" />
+        <activity android:name=".InformacionPersonalActivity" />
+        <!--5.7 mis pedidos-->
+        <activity android:name=".MisPedidosActivity" />
+        <!--5.8 mi direccion-->
+        <activity android:name=".MiDireccionActivity" />
+        <!--5.9 mis datos de pago-->
+        <activity android:name=".MisDatosPagoActivity" />
+        <!--5.10 accesibilidad-->
+        <activity android:name=".AccesibilidadActivity" />
+        <!--5.11 activar vendedor-->
+        <activity android:name=".ActivarVendedorActivity" />
+        <!--5.12 eliminar cuenta-->
+        <activity android:name=".EliminarCuentaActivity" />
+        <!--5.13 configuracion-->
+        <activity android:name=".ConfiguracionActivity" />
+        <!---5.14 notificaciones-->
+        <activity android:name=".NotificacionesActivity" />
+        <!---5.15 idioma-->
+        <activity android:name=".IdiomaActivity" />
 
 
 

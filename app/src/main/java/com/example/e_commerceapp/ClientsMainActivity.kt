@@ -127,7 +127,7 @@ class ClientsMainActivity : AppCompatActivity() {
                 }
                 //perfil
                 R.id.nav_perfil -> {
-                    Toast.makeText(this, "Perfil próximamente", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, PerfilActivity::class.java))
                     true
                 }
                 else -> false
