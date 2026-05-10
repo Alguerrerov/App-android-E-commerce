@@ -24,7 +24,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
                 Toast.makeText(this, "Ingresa un correo válido", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            // Aquí iría la llamada al backend
+            //logica para recuperacion de contreseña
             Toast.makeText(this, "Enlace enviado a $email", Toast.LENGTH_LONG).show()
             finish()
         }

@@ -68,7 +68,7 @@ class FingerprintActivity : AppCompatActivity() {
                 }
 
                 override fun onAuthenticationFailed() {
-                    // Huella no reconocida — el diálogo del sistema ya lo indica, no hace falta Toast
+                    // Huella no reconocida
                 }
             })
 
