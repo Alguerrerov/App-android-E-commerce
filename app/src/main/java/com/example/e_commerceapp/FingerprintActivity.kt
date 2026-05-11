@@ -54,7 +54,7 @@ class FingerprintActivity : AppCompatActivity() {
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     // ✅ Ir a la pantalla principal
-                    startActivity(Intent(this@FingerprintActivity, MainActivity::class.java))
+                    startActivity(Intent(this@FingerprintActivity, ClientsMainActivity::class.java))
                     finish()
                 }
 

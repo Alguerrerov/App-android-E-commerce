@@ -46,6 +46,7 @@ class LoginActivity: AppCompatActivity() {
 
     private fun setupButtons() {
         binding.btnLogin.setOnClickListener {
+            // Validar credenciales
             val input = binding.etInput.text.toString().trim()
             val pass  = binding.etPassword.text.toString().trim()
 
@@ -54,8 +55,6 @@ class LoginActivity: AppCompatActivity() {
                     Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
-            // Validar credenciales admin
 
             //////usarios permitidos////
             data class User(val name: String, val pass: String, val targetActivity: Class<*>)
