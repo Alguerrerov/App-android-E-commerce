@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,7 @@
         android:theme="@style/Theme.EcommerceAPP">
 
         <!-- 1. SplashActivity: pantalla de inicio -->
-        <activity android:name=".SplashActivity"
+        <activity android:name=".auth.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -22,13 +24,15 @@
         </activity>
 
         <!-- 2. pantalla login -->
-        <activity android:name=".LoginActivity"
+        <activity android:name=".auth.LoginActivity"
             android:exported="false"/>
         <!-- 2.1 pantalla login fingerprint -->
-        <activity android:name=".FingerprintActivity"
+        <activity android:name=".auth.FingerprintActivity"
             android:exported="false" />
         <!-- 2.2 pantalla login forgot password -->
-        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".auth.ForgotPasswordActivity" />
+        <!-- 2.3 pantalla login crear cuenta -->
+        <activity android:name=".auth.CrearCuentaActivity" android:exported="false"/>
 
         <activity
             android:name=".MainActivity"
@@ -36,72 +40,72 @@
         </activity>
         <!-- 3. admin dashboard -->
         <activity
-            android:name=".AdminMainActivity"
+            android:name=".admin.AdminMainActivity"
             android:exported="false"/>
         <!--3.1 admin clientes-->
-        <activity android:name=".ClientesActivity" android:exported="false"/>
-        <activity android:name=".AddUserActivity"  android:exported="false"/>
-        <activity android:name=".DetalleClienteActivity"  android:exported="false"/>
-        <activity android:name=".OpcionesClienteActivity" android:exported="false"/>
+        <activity android:name=".admin.ClientesActivity" android:exported="false"/>
+        <activity android:name=".auth.AddUserActivity"  android:exported="false"/>
+        <activity android:name=".admin.DetalleClienteActivity"  android:exported="false"/>
+        <activity android:name=".client.OpcionesClienteActivity" android:exported="false"/>
         <!--3.2 admin productos-->
-        <activity android:name=".ProductosActivity"       android:exported="false"/>
-        <activity android:name=".DetalleProductoActivity"  android:exported="false"/>
-        <activity android:name=".AgregarProductoActivity"  android:exported="false"/>
-        <activity android:name=".AgregarProductoFotosActivity" android:exported="false"/>
+        <activity android:name=".admin.ProductosActivity"       android:exported="false"/>
+        <activity android:name=".admin.DetalleProductoActivity"  android:exported="false"/>
+        <activity android:name=".model.AgregarProductoActivity"  android:exported="false"/>
+        <activity android:name=".model.AgregarProductoFotosActivity" android:exported="false"/>
         <!--3.3 admin pedidos-->
-        <activity android:name=".PedidosAdminActivity" />
-        <activity android:name=".DetallePeticionActivity" />
-        <activity android:name=".DetallePedidoAdminActivity" />
+        <activity android:name=".admin.PedidosAdminActivity" />
+        <activity android:name=".admin.DetallePeticionActivity" />
+        <activity android:name=".admin.DetallePedidoAdminActivity" />
 
         <!--4. vendedor-->
         <activity
-            android:name=".SellersMainActivity"
+            android:name=".seller.SellersMainActivity"
             android:exported="false"/>
         <!--4.1 vendedor productos-->
-        <activity android:name=".ProductosSellerActivity" android:exported="false"/>
-        <activity android:name=".DetalleProductoSellerActivity" android:exported="false"/>
-        <activity android:name=".AgregarProductoSellerActivity" android:exported="false"/>
-        <activity android:name=".AgregarProductoFotosSellerActivity" android:exported="false"/>
+        <activity android:name=".seller.ProductosSellerActivity" android:exported="false"/>
+        <activity android:name=".seller.DetalleProductoSellerActivity" android:exported="false"/>
+        <activity android:name=".seller.AgregarProductoSellerActivity" android:exported="false"/>
+        <activity android:name=".seller.AgregarProductoFotosSellerActivity" android:exported="false"/>
         <!--4.2 vendedor pedidos-->
-        <activity android:name=".PedidosSellerActivity" />
-        <activity android:name=".DetallePedidoSellerActivity" />
+        <activity android:name=".seller.PedidosSellerActivity" />
+        <activity android:name=".seller.DetallePedidoSellerActivity" />
         <!--4.3 vendedor clientes-->
-        <activity android:name=".ClientesSellerActivity" />
-        <activity android:name=".DetalleClienteSellerActivity" />
+        <activity android:name=".seller.ClientesSellerActivity" />
+        <activity android:name=".seller.DetalleClienteSellerActivity" />
 
         <!--5. cliente-->
-        <activity android:name=".ClientsMainActivity" android:exported="false"/>
+        <activity android:name=".client.ClientsMainActivity" android:exported="false"/>
         <!--5.1 cliente catalogo-->
-        <activity android:name=".CatalogoActivity" android:exported="false"/>
+        <activity android:name=".client.CatalogoActivity" android:exported="false"/>
         <!---5.2 cliente busqueda-->
-        <activity android:name=".BusquedaActivity" android:exported="false"/>
+        <activity android:name=".client.BusquedaActivity" android:exported="false"/>
         <!--5.3 cliente detalle producto-->
-        <activity android:name=".DetalleProductoClienteActivity" android:exported="false"/>
+        <activity android:name=".client.DetalleProductoClienteActivity" android:exported="false"/>
         <!--5.4 cliente carrito-->
-        <activity android:name=".CarritoActivity" android:exported="false"/>
+        <activity android:name=".client.CarritoActivity" android:exported="false"/>
         <!--5.5 cliente resumen compra-->
-        <activity android:name=".ResumenCompraActivity" android:exported="false"/>
+        <activity android:name=".client.ResumenCompraActivity" android:exported="false"/>
         <!--5.6 perfil-->
-        <activity android:name=".PerfilActivity" />
-        <activity android:name=".InformacionPersonalActivity" />
+        <activity android:name=".ui.PerfilActivity" />
+        <activity android:name=".ui.InformacionPersonalActivity" />
         <!--5.7 mis pedidos-->
-        <activity android:name=".MisPedidosActivity" />
+        <activity android:name=".client.MisPedidosActivity" />
         <!--5.8 mi direccion-->
-        <activity android:name=".MiDireccionActivity" />
+        <activity android:name=".client.MiDireccionActivity" />
         <!--5.9 mis datos de pago-->
-        <activity android:name=".MisDatosPagoActivity" />
+        <activity android:name=".client.MisDatosPagoActivity" />
         <!--5.10 accesibilidad-->
-        <activity android:name=".AccesibilidadActivity" />
+        <activity android:name=".ui.AccesibilidadActivity" />
         <!--5.11 activar vendedor-->
-        <activity android:name=".ActivarVendedorActivity" />
+        <activity android:name=".seller.ActivarVendedorActivity" />
         <!--5.12 eliminar cuenta-->
-        <activity android:name=".EliminarCuentaActivity" />
+        <activity android:name=".ui.EliminarCuentaActivity" />
         <!--5.13 configuracion-->
-        <activity android:name=".ConfiguracionActivity" />
+        <activity android:name=".ui.ConfiguracionActivity" />
         <!---5.14 notificaciones-->
-        <activity android:name=".NotificacionesActivity" />
+        <activity android:name=".ui.NotificacionesActivity" />
         <!---5.15 idioma-->
-        <activity android:name=".IdiomaActivity" />
+        <activity android:name=".ui.IdiomaActivity" />
 
 
 

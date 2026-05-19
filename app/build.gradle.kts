@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -48,10 +49,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     //Dependencias agregadas
     implementation("com.google.android.material:material:1.11.0")
         ///////graficas////
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
         /////biometricos////
     implementation("androidx.biometric:biometric:1.1.0")
+        /////supabase////
+    implementation(platform (libs.supabase.bom))
+    implementation(libs.supabase.postgrest)
+    implementation(libs.supabase.auth)
+    implementation(libs.ktor.client.android)
+    implementation(libs.kotlinx.serialization.json)
+
 }
