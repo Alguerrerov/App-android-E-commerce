@@ -147,30 +147,69 @@ class CrearCuentaActivity : AppCompatActivity() {
         // Registrar en supabase
         lifecycleScope.launch {
             try {
-                //Registro correo y contraseña en supabase
-                SupabaseClient.client.auth.signUpWith(Email){
-                    email = correo
+                // Paso 1: Auth
+                android.util.Log.d("SUPABASE", "Paso 1: Registrando en Auth...")
+                SupabaseClient.client.auth.signUpWith(Email) {
+                    email    = correo
                     password = contrasena
                 }
+                android.util.Log.d("SUPABASE", "Paso 1: Auth OK")
 
-                // obtener uuid generado y guardar datos
-                val userId= SupabaseClient.client.auth.currentUserOrNull()?.id ?: ""
+                // Paso 2: UUID
+                val userId = SupabaseClient.client.auth
+                    .currentUserOrNull()?.id ?: ""
+                android.util.Log.d("SUPABASE", "Paso 2: UserId = $userId")
+
+                if (userId.isEmpty()) {
+                    android.util.Log.e("SUPABASE", "Error: userId vacío")
+                    runOnUiThread {
+                        Toast.makeText(this@CrearCuentaActivity,
+                            "Error obteniendo el usuario", Toast.LENGTH_LONG).show()
+                    }
+                    return@launch
+                }
+
+                // Paso 3: Insert en tabla
+                android.util.Log.d("SUPABASE", "Paso 3: Insertando en tabla Usuarios...")
                 SupabaseClient.client.postgrest["Usuarios"].insert(
                     UsuarioData(
-                    id = userId,
-                    nombre = nombre,
-                    apellido = apellido,
-                    correo = correo,
-                    telefono = telefono
+                        id       = userId,
+                        nombre   = nombre,
+                        apellido = apellido,
+                        correo   = correo,
+                        telefono = telefono
+                    )
+                )
+                android.util.Log.d("SUPABASE", "Paso 3: Insert OK")
 
-                ))
+                // Guardar datos del usuario localmente
+                val prefs = getSharedPreferences("autoparts_prefs", MODE_PRIVATE)
+                prefs.edit()
+                    .putString("user_id", userId)
+                    .putString("user_nombre", nombre)
+                    .putString("user_apellido", apellido)
+                    .putString("user_correo", correo)
+                    .putString("user_telefono", telefono)
+                    .apply()
 
-                //redirigir a login
+
+
                 runOnUiThread {
-                    Toast.makeText(this@CrearCuentaActivity,"Registro exitoso", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@CrearCuentaActivity, LoginActivity::class.java))
+                    Toast.makeText(
+                        this@CrearCuentaActivity,
+                        "¡Cuenta creada exitosamente! ✓",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    val intent = Intent(
+                        this@CrearCuentaActivity,
+                        LoginActivity::class.java
+                    )
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
                     finish()
                 }
+
             } catch (e: Exception){
                 android.util.Log.e("SUPABASE", "Error: ${e.message}")
                 android.util.Log.e("SUPABASE", "Causa: ${e.cause}")

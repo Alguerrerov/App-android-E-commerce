@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#1A1A2E</color>
-    <color name="primary_dark">#16213E</color>
-    <color name="accent">#E94560</color>
-    <color name="accent_light">#FF6B81</color>
-    <color name="surface">#0F3460</color>
-    <color name="white">#FFFFFF</color>
-    <color name="white_70">#B3FFFFFF</color>
-    <color name="white_30">#4DFFFFFF</color>
-    <color name="input_bg">#1E2A45</color>
-    <color name="hint_color">#7A8BAA</color>
-    <color name="error_color">#FF4757</color>
-    <color name="black">#000000</color>
+    <!-- Fondos -->
+    <color name="bg_screen">#0A1628</color>
+    <color name="bg_card">#0D2137</color>
+    <color name="bg_input">#1E2A45</color>
+    <color name="bg_section">#1E2D3D</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8899AA</color>
+
+    <!-- Acento -->
+    <color name="accent_blue">#1E90FF</color>
+
+    <!-- Estados -->
+    <color name="state_active">#4CAF50</color>
+    <color name="state_pending">#EF9F27</color>
+    <color name="state_rejected">#E74C3C</color>
+    <color name="state_cancelled">#E24B4A</color>
+    <color name="state_inactive">#8899AA</color>
 </resources>

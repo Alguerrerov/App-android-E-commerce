@@ -17,32 +17,49 @@ class PerfilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPerfilBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //perfil
+
+        // Cargar datos del usuario desde SharedPreferences
+        cargarDatosUsuario()
+
         binding.tvEditarPerfil.setOnClickListener {
             startActivity(Intent(this, InformacionPersonalActivity::class.java))
         }
-        //pedidos
         binding.itemMisPedidos.setOnClickListener {
             startActivity(Intent(this, MisPedidosActivity::class.java))
         }
-        //direccion
         binding.itemMiDireccion.setOnClickListener {
             startActivity(Intent(this, MiDireccionActivity::class.java))
         }
-        //datos de pago
         binding.itemDatosPago.setOnClickListener {
             startActivity(Intent(this, MisDatosPagoActivity::class.java))
         }
-        //configuracion
         binding.itemConfiguracion.setOnClickListener {
             startActivity(Intent(this, ConfiguracionActivity::class.java))
         }
-
         binding.itemCerrarSesion.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
+            // Limpiar datos al cerrar sesión
+            cerrarSesion()
         }
+    }
+
+    private fun cargarDatosUsuario() {
+        val prefs   = getSharedPreferences("autoparts_prefs", MODE_PRIVATE)
+        val nombre  = prefs.getString("user_nombre", "Usuario") ?: "Usuario"
+        val correo  = prefs.getString("user_correo", "") ?: ""
+
+        binding.tvNombre.text = nombre
+        binding.tvEmail.text  = correo
+    }
+
+    private fun cerrarSesion() {
+        // Limpiar SharedPreferences al cerrar sesión
+        val prefs = getSharedPreferences("autoparts_prefs", MODE_PRIVATE)
+        prefs.edit().clear().apply()
+
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 }
