@@ -5,14 +5,14 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Contenido principal -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#0A1628">
+        android:background="@color/bg_screen">
 
         <!-- TopBar -->
         <LinearLayout
@@ -21,14 +21,14 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:paddingHorizontal="12dp"
-            android:background="#0A1628">
+            android:background="@color/bg_screen">
 
             <ImageButton
                 android:id="@+id/btnMenu"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_menu"
-                app:tint="#FFFFFF"
+                app:tint="@color/text_primary"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <!-- Logo -->
@@ -43,20 +43,20 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:src="@drawable/ic_gear_wrench"
-                    app:tint="#1E90FF"
+                    app:tint="@color/accent_blue"
                     android:layout_marginEnd="6dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Auto"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Parts"
-                    android:textColor="#1E90FF"
+                    android:textColor="@color/accent_blue"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -66,7 +66,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_notifications"
-                app:tint="#FFFFFF"
+                app:tint="@color/text_primary"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
 
@@ -101,7 +101,7 @@
                             android:alpha="0.6"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_brake_disc"
-                            app:tint="#1E2A45" />
+                            app:tint="@color/bg_item" />
 
                         <!-- Texto banner -->
                         <LinearLayout
@@ -114,14 +114,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="FRENOS"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="28sp"
                                 android:textStyle="bold"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SEGURIDAD QUE\nTE PROTEGE"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="13sp"
                                 android:layout_marginBottom="12dp"/>
                             <com.google.android.material.button.MaterialButton
@@ -129,9 +129,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:text="VER MÁS"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="11sp"
-                                app:backgroundTint="#1E90FF"
+                                app:backgroundTint="@color/accent_blue"
                                 app:cornerRadius="6dp"/>
                         </LinearLayout>
 
@@ -151,7 +151,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Categorías"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp"
                         android:textStyle="bold"/>
                     <TextView
@@ -159,7 +159,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ver todas"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/accent_blue"
                         android:textSize="12sp"
                         android:clickable="true"
                         android:focusable="true"/>
@@ -187,14 +187,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/ic_gear_wrench"
-                            app:tint="#1E90FF"
+                            app:tint="@color/accent_blue"
                             android:background="#0D2137"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Filtros"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp"/>
                     </LinearLayout>
@@ -213,14 +213,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/ic_battery"
-                            app:tint="#EF9F27"
-                            android:background="#0D2137"
+                            app:tint="@color/state_pending"
+                            android:background="@color/bg_card"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Baterías"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp"/>
                     </LinearLayout>
@@ -239,14 +239,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/ic_suspension"
-                            app:tint="#4CAF50"
+                            app:tint="@color/state_active"
                             android:background="#0D2137"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Suspensión"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp"/>
                     </LinearLayout>
@@ -265,14 +265,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/ic_oil"
-                            app:tint="#E24B4A"
-                            android:background="#0D2137"
+                            app:tint="@color/state_rejected"
+                            android:background="@color/bg_card"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Aceites"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="11sp"
                             android:layout_marginTop="6dp"/>
                     </LinearLayout>
@@ -292,7 +292,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Productos destacados"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp"
                         android:textStyle="bold"/>
                     <TextView
@@ -300,7 +300,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ver todos"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/accent_blue"
                         android:textSize="12sp"
                         android:clickable="true"
                         android:focusable="true"/>
@@ -320,7 +320,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:cardBackgroundColor="#0D2137"
+                        app:cardBackgroundColor="@color/bg_card"
                         app:cardCornerRadius="10dp"
                         android:clickable="true"
                         android:focusable="true"
@@ -334,15 +334,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
                                 android:src="@drawable/ic_products"
-                                app:tint="#8899AA"
+                                app:tint="@color/state_inactive"
                                 android:scaleType="centerInside"
-                                android:background="#1E2A45"
+                                android:background="@color/bg_item"
                                 android:layout_marginBottom="8dp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Batería 12V 60Ah"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:maxLines="2"
@@ -351,7 +351,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="$320.900"
-                                android:textColor="#1E90FF"
+                                android:textColor="@color/accent_blue"
                                 android:textSize="13sp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="4dp"/>
@@ -369,14 +369,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" 4.7"
-                                    android:textColor="#EF9F27"
+                                    android:textColor="@color/state_pending"
                                     android:textSize="11sp"/>
                             </LinearLayout>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="En stock"
-                                android:textColor="#4CAF50"
+                                android:textColor="@color/state_active"
                                 android:textSize="10sp"
                                 android:layout_marginTop="4dp"/>
                         </LinearLayout>
@@ -388,7 +388,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:cardBackgroundColor="#0D2137"
+                        app:cardBackgroundColor="@color/bg_card"
                         app:cardCornerRadius="10dp"
                         android:clickable="true"
                         android:focusable="true"
@@ -402,15 +402,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="90dp"
                                 android:src="@drawable/ic_products"
-                                app:tint="#8899AA"
+                                app:tint="@color/state_inactive"
                                 android:scaleType="centerInside"
-                                android:background="#1E2A45"
+                                android:background="@color/bg_item"
                                 android:layout_marginBottom="8dp"/>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Disco de Freno Ventilado Delantero"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:maxLines="2"
@@ -419,7 +419,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="$120.900"
-                                android:textColor="#1E90FF"
+                                android:textColor="@color/accent_blue"
                                 android:textSize="13sp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="4dp"/>
@@ -437,14 +437,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text=" 4.9"
-                                    android:textColor="#EF9F27"
+                                    android:textColor="@color/state_pending"
                                     android:textSize="11sp"/>
                             </LinearLayout>
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="En stock"
-                                android:textColor="#4CAF50"
+                                android:textColor="@color/state_active"
                                 android:textSize="10sp"
                                 android:layout_marginTop="4dp"/>
                         </LinearLayout>
@@ -460,7 +460,7 @@
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#0D2137"
+            android:background="@color/bg_card"
             app:itemIconTint="@drawable/bottom_nav_selector"
             app:itemTextColor="@drawable/bottom_nav_selector"
             app:menu="@menu/menu_cliente_bottom"/>
@@ -476,7 +476,7 @@
         android:background="#0A1628"
         app:headerLayout="@layout/nav_header_cliente"
         app:menu="@menu/menu_cliente_nav"
-        app:itemTextColor="#FFFFFF"
-        app:itemIconTint="#8899AA"/>
+        app:itemTextColor="@color/text_primary"
+        app:itemIconTint="@color/state_inactive"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A1628"
+    android:background="@color/bg_screen"
     android:fillViewport="true">
 
     <LinearLayout
@@ -19,20 +19,20 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:paddingHorizontal="12dp"
-            android:background="#0D2137">
+            android:background="@color/bg_card">
             <ImageButton
                 android:id="@+id/btnBack"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_arrow_back"
-                app:tint="#FFFFFF"
+                app:tint="@color/text_primary"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Detalle de cliente"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginStart="8dp"/>
@@ -45,13 +45,13 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="16dp"
-            android:background="#0D2137">
+            android:background="@color/bg_card">
             <ImageView
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:src="@drawable/ic_person"
-                app:tint="#FFFFFF"
-                android:background="#1E3A5F"
+                app:tint="@color/text_primary"
+                android:background="@color/bg_avatar"
                 android:padding="10dp"
                 android:layout_marginEnd="12dp"/>
             <LinearLayout
@@ -69,7 +69,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Juan Pérez"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginEnd="8dp"/>
@@ -78,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Cliente"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/accent_blue"
                         android:textSize="11sp"
                         android:background="#1A1E90FF"
                         android:paddingHorizontal="8dp"
@@ -89,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="juanperez@gmail.com"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ID: CLT-0001245"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/accent_blue"
                         android:textSize="11sp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -123,7 +123,7 @@
                 android:id="@+id/cardEditar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -138,15 +138,38 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:gravity="center"
-                        android:background="#1A1E90FF"
+                        android:background="@color/bg_bdg"
                         android:layout_marginEnd="12dp">
-                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_edit" app:tint="#1E90FF"/>
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_edit"
+                            app:tint="@color/accent_blue"/>
                     </LinearLayout>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Editar información" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modificar datos personales del cliente" android:textColor="#8899AA" android:textSize="12sp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Editar información"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Modificar datos personales del cliente"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="12sp"/>
                     </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_right" app:tint="#8899AA"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/state_inactive"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -155,7 +178,7 @@
                 android:id="@+id/cardHistorial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -166,14 +189,42 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="14dp">
-                    <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:background="#A4C639" android:layout_marginEnd="12dp">
-                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_orders" app:tint="#4CAF50"/>
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:background="@color/bg_green"
+                        android:layout_marginEnd="12dp">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_orders"
+                            app:tint="@color/state_active"/>
                     </LinearLayout>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Historial de pedidos" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver todos los pedidos realizados" android:textColor="#8899AA" android:textSize="12sp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Historial de pedidos"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver todos los pedidos realizados"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="12sp"/>
                     </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_right" app:tint="#8899AA"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/state_inactive"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -182,7 +233,7 @@
                 android:id="@+id/cardDirecciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -193,14 +244,42 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="14dp">
-                    <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:background="#FFFF00" android:layout_marginEnd="12dp">
-                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_location" app:tint="#EF9F27"/>
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:background="@color/bg_yellow"
+                        android:layout_marginEnd="12dp">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_location"
+                            app:tint="@color/state_pending"/>
                     </LinearLayout>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver direcciones" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gestionar direcciones guardadas" android:textColor="#8899AA" android:textSize="12sp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver direcciones"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gestionar direcciones guardadas"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="12sp"/>
                     </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_right" app:tint="#8899AA"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/state_inactive"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -209,7 +288,7 @@
                 android:id="@+id/cardBloquear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -220,14 +299,42 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="14dp">
-                    <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:background="#FFFFFF" android:layout_marginEnd="12dp">
-                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_lock" app:tint="#E24B4A"/>
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:background="@color/text_primary"
+                        android:layout_marginEnd="12dp">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_lock"
+                            app:tint="@color/state_cancelled"/>
                     </LinearLayout>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bloquear cliente" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Impedir que el cliente acceda a la app" android:textColor="#8899AA" android:textSize="12sp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bloquear cliente"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Impedir que el cliente acceda a la app"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="12sp"/>
                     </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_right" app:tint="#8899AA"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/state_inactive"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -236,7 +343,7 @@
                 android:id="@+id/cardEliminar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -247,24 +354,59 @@
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:padding="14dp">
-                    <LinearLayout android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:background="#FF0000" android:layout_marginEnd="12dp">
-                        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_delete" app:tint="#E24B4A"/>
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:background="@color/bg_red"
+                        android:layout_marginEnd="12dp">
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_delete"
+                            app:tint="@color/state_cancelled"/>
                     </LinearLayout>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eliminar cliente" android:textColor="#E24B4A" android:textSize="14sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eliminar cuenta y todos sus datos." android:textColor="#8899AA" android:textSize="12sp"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eliminar cliente"
+                            android:textColor="@color/state_cancelled"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eliminar cuenta y todos sus datos."
+                            android:textColor="@color/state_inactive"
+                            android:textSize="12sp"/>
                     </LinearLayout>
-                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_right" app:tint="#8899AA"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/state_inactive"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Estado actual -->
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estado actual" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado actual"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="16dp">
                 <LinearLayout
@@ -272,16 +414,34 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="14dp">
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Estado" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvEstadoActual" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Activo" android:textColor="#4CAF50" android:textSize="13sp" android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Estado"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvEstadoActual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Activo"
+                            android:textColor="@color/state_active"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
                     <TextView
                         android:id="@+id/tvDescripcionEstado"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="El cliente puede iniciar sesión y realizar compras con normalidad.\n\nSi bloqueas o eliminas al cliente, ya no podrá acceder a la aplicación."
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="12sp"
                         android:lineSpacingExtra="4dp"/>
                 </LinearLayout>

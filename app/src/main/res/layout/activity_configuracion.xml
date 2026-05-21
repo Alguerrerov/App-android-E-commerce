@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:layout_marginEnd="12dp"/>
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Configuración"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#0D2137"
+            android:background="@color/bg_card"
             android:padding="16dp"
             android:layout_marginBottom="2dp"
             android:clickable="true"
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Notificaciones"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="14sp"/>
 
@@ -83,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Preguntas frecuentes"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#0D2137"
+            android:background="@color/bg_card"
             android:padding="16dp"
             android:layout_marginBottom="2dp"
             android:clickable="true"
@@ -125,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Idioma"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="14sp"/>
 
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Contacto por whatsapp o correo"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -141,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -152,7 +152,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#0D2137"
+            android:background="@color/bg_card"
             android:padding="16dp"
             android:layout_marginBottom="2dp"
             android:clickable="true"
@@ -175,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Accesibilidad"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="14sp"/>
 
@@ -183,7 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Historial de solicitudes de soporte"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -191,7 +191,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -202,7 +202,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#0D2137"
+            android:background="@color/bg_card"
             android:padding="16dp"
             android:layout_marginBottom="2dp"
             android:clickable="true"
@@ -225,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Activar modo Vendedor"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="14sp"/>
 
@@ -233,7 +233,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gestiona tu tienda y productos"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -241,7 +241,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_active"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -252,7 +252,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#0D2137"
+            android:background="@color/bg_card"
             android:padding="16dp"
             android:clickable="true"
             android:focusable="true">
@@ -274,7 +274,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eliminar cuenta"
-                    android:textColor="#E74C3C"
+                    android:textColor="@color/state_rejected"
                     android:textStyle="bold"
                     android:textSize="14sp"/>
 
@@ -282,7 +282,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eliminar tu cuenta y datos"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -290,7 +290,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#E74C3C"
+                android:textColor="@color/state_rejected"
                 android:textSize="20sp"/>
         </LinearLayout>
     </LinearLayout>

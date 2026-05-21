@@ -8,19 +8,19 @@
     <View android:id="@+id/legendColor"
         android:layout_width="10dp"
         android:layout_height="10dp"
-        android:background="#EF9F27"
+        android:background="@color/state_pending"
         android:layout_marginEnd="6dp"/>
     <TextView android:id="@+id/legendLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Pendientes"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text_primary"
         android:textSize="12sp"/>
     <TextView android:id="@+id/legendCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="18"
-        android:textColor="#8899AA"
+        android:textColor="@color/state_inactive"
         android:textSize="12sp"/>
 </LinearLayout>

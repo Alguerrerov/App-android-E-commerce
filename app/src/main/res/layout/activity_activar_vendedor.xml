@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:layout_marginEnd="12dp"/>
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Activar modo Vendedor"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Activa tu modo vendedor"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Convierte tu cuenta en una tienda, publica tus productos, gestiona tus pedidos y comienza a vender."
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"
                 android:gravity="center"
                 android:layout_marginBottom="32dp"/>
@@ -108,7 +108,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Crea tu tienda"
-                            android:textColor="#FFFFFF"
+                            android:textColor="#@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -116,7 +116,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Personaliza el nombre y la información de tu tienda."
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -146,7 +146,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Publica productos"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -154,7 +154,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Agrega y administra tus productos fácilmente."
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -184,7 +184,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Gestiona pedidos"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -192,7 +192,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Maneja los pedidos y envíos de tus clientes."
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -222,7 +222,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Reportes y estadísticas"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -230,7 +230,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Consulta tus ventas y el rendimiento de tu tienda."
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -244,8 +244,8 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:text="Activar modo vendedor"
-        android:backgroundTint="#1E90FF"
-        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/text_blue"
+        android:textColor="@color/text_primary"
         android:textStyle="bold"
         android:layout_margin="16dp"/>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- TopBar -->
     <LinearLayout
@@ -14,20 +14,20 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="12dp"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Catálogo"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
@@ -36,7 +36,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_filter"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
     </LinearLayout>
 
@@ -46,11 +46,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Buscar productos..."
-        app:hintTextColor="#8899AA"
-        app:boxStrokeColor="#1E2A45"
-        app:boxBackgroundColor="#0D2137"
+        app:hintTextColor="@color/state_inactive"
+        app:boxStrokeColor="@color/bg_item"
+        app:boxBackgroundColor="@color/bg_card"
         app:startIconDrawable="@drawable/ic_search"
-        app:startIconTint="#8899AA"
+        app:startIconTint="@color/state_inactive"
         app:boxCornerRadiusTopStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -62,7 +62,7 @@
             android:id="@+id/etSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/state_inactive"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,54 +83,54 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Todos"
-                android:textColor="#FFFFFF"
-                app:chipBackgroundColor="#1E90FF"
-                app:chipStrokeColor="#1E90FF"
+                android:textColor="@color/text_primary"
+                app:chipBackgroundColor="@color/accent_blue"
+                app:chipStrokeColor="@color/accent_blue"
                 style="@style/Widget.MaterialComponents.Chip.Filter"/>
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFiltros"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Filtros"
-                android:textColor="#8899AA"
-                app:chipBackgroundColor="#0D2137"
-                app:chipStrokeColor="#1E2A45"
+                android:textColor="@color/state_inactive"
+                app:chipBackgroundColor="@color/bg_card"
+                app:chipStrokeColor="@color/bg_item"
                 style="@style/Widget.MaterialComponents.Chip.Filter"/>
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFrenos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Frenos"
-                android:textColor="#8899AA"
-                app:chipBackgroundColor="#0D2137"
-                app:chipStrokeColor="#1E2A45"
+                android:textColor="@color/state_inactive"
+                app:chipBackgroundColor="@color/bg_card"
+                app:chipStrokeColor="@color/bg_item"
                 style="@style/Widget.MaterialComponents.Chip.Filter"/>
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipAceites"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Aceites"
-                android:textColor="#8899AA"
-                app:chipBackgroundColor="#0D2137"
-                app:chipStrokeColor="#1E2A45"
+                android:textColor="@color/state_inactive"
+                app:chipBackgroundColor="@color/bg_card"
+                app:chipStrokeColor="@color/bg_item"
                 style="@style/Widget.MaterialComponents.Chip.Filter"/>
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipBaterias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Baterías"
-                android:textColor="#8899AA"
-                app:chipBackgroundColor="#0D2137"
-                app:chipStrokeColor="#1E2A45"
+                android:textColor="@color/state_inactive"
+                app:chipBackgroundColor="@color/bg_card"
+                app:chipStrokeColor="@color/bg_item"
                 style="@style/Widget.MaterialComponents.Chip.Filter"/>
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipSuspension"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Suspensión"
-                android:textColor="#8899AA"
-                app:chipBackgroundColor="#0D2137"
-                app:chipStrokeColor="#1E2A45"
+                android:textColor="@color/state_inactive"
+                app:chipBackgroundColor="@color/bg_card"
+                app:chipStrokeColor="@color/bg_item"
                 style="@style/Widget.MaterialComponents.Chip.Filter"/>
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
@@ -141,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="56 productos encontrados"
-        android:textColor="#8899AA"
+        android:textColor="@color/state_inactive"
         android:textSize="12sp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="8dp"/>

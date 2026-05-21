@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0D1B2A">
+    android:background="@color/bg_screen">
 
     <!-- Buscador -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#1E2D3D"
+        android:background="@color/bg_section"
         android:paddingHorizontal="12dp"
         android:paddingVertical="8dp"
         android:gravity="center_vertical"
@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Buscar clientes..."
-            android:textColorHint="#8899AA"
-            android:textColor="#FFFFFF"
+            android:textColorHint="@color/state_inactive"
+            android:textColor="@color/text_primary"
             android:background="@null"/>
 
         <TextView
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Todos (248)"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="13sp"
             android:paddingBottom="6dp"
             android:layout_marginEnd="20dp"/>
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Activos (210)"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="13sp"
             android:paddingBottom="6dp"
             android:layout_marginEnd="20dp"/>
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inactivos (38)"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="13sp"
             android:paddingBottom="6dp"/>
     </LinearLayout>
@@ -92,7 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mostrando 1-6 de 248 clientes"
-        android:textColor="#8899AA"
+        android:textColor="@color/state_inactive"
         android:textSize="12sp"
         android:padding="16dp"/>
 

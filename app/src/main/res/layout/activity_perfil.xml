@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_height="36dp"
             android:src="@drawable/ic_settings"
             android:background="?attr/selectableItemBackgroundBorderless"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             xmlns:app="http://schemas.android.com/apk/res-auto"/>
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Perfil"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -54,10 +54,10 @@
             android:layout_height="80dp"
             android:gravity="center"
             android:text="x"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="36sp"
             android:textStyle="bold"
-            android:background="#E67E22"
+            android:background="@color/state_pending"
             android:layout_marginBottom="12dp"/>
 
         <TextView
@@ -65,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Señor X"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="4dp"/>
@@ -74,8 +74,7 @@
             android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="homeroj.simpson@email.com"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="13sp"
             android:layout_marginBottom="8dp"/>
 
@@ -84,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Editar perfil"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="13sp"
             android:clickable="true"
             android:focusable="true"/>
@@ -122,14 +121,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Mis pedidos"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -157,14 +156,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Mi dirección"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -192,14 +191,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Mis datos de pago"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -227,14 +226,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Configuración"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="20sp"/>
         </LinearLayout>
 
@@ -261,14 +260,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Cerrar sesión"
-                android:textColor="#E74C3C"
+                android:textColor="@color/state_rejected"
                 android:textSize="15sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="›"
-                android:textColor="#E74C3C"
+                android:textColor="@color/state_rejected"
                 android:textSize="20sp"/>
         </LinearLayout>
     </LinearLayout>

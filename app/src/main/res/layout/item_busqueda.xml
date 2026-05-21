@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    app:cardBackgroundColor="#0D2137"
+    app:cardBackgroundColor="@color/bg_card"
     app:cardCornerRadius="10dp"
     android:clickable="true"
     android:focusable="true"
@@ -22,7 +22,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            app:cardBackgroundColor="#1E2A45"
+            app:cardBackgroundColor="@color/bg_input"
             app:cardCornerRadius="8dp"
             android:layout_marginEnd="12dp">
             <ImageView
@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_products"
-                app:tint="#8899AA"
+                app:tint="@color/state_inactive"
                 android:scaleType="centerInside"
                 android:padding="12dp"/>
         </androidx.cardview.widget.CardView>
@@ -48,10 +48,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="-15%"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                android:background="#E24B4A"
+                android:background="@color/state_cancelled"
                 android:paddingHorizontal="6dp"
                 android:paddingVertical="2dp"
                 android:layout_marginBottom="4dp"
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Filtro 1"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:maxLines="2"
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="marca del auto"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="12sp"
                 android:layout_marginBottom="6dp"/>
 
@@ -89,14 +89,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="★★★★☆"
-                    android:textColor="#EF9F27"
+                    android:textColor="@color/state_pending"
                     android:textSize="14sp"/>
                 <TextView
                     android:id="@+id/tvRating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" 4.5"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="11sp"/>
             </LinearLayout>
 
@@ -105,7 +105,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$XX.XXX"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/state_inactive"
                 android:textSize="15sp"
                 android:textStyle="bold"/>
         </LinearLayout>

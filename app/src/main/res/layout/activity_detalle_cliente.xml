@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- TopBar -->
     <LinearLayout
@@ -20,14 +20,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Detalle de cliente"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
@@ -40,13 +40,13 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
         <ImageView
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:src="@drawable/ic_person"
-            app:tint="#FFFFFF"
-            android:background="#1E3A5F"
+            app:tint="@color/text_primary"
+            android:background="@color/bg_avatar"
             android:padding="10dp"
             android:layout_marginEnd="12dp"/>
         <LinearLayout
@@ -64,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Juan Pérez"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_marginEnd="8dp"/>
@@ -73,9 +73,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cliente"
-                    android:textColor="#1E90FF"
+                    android:textColor="@color/accent_blue"
                     android:textSize="11sp"
-                    android:background="#1A1E90FF"
+                    android:background="@color/bg_bdg"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="2dp"/>
             </LinearLayout>
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="juanperez@gmail.com"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="12sp"
                 android:layout_marginTop="2dp"/>
             <TextView
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ID: CLT-0001245"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 android:textSize="11sp"
                 android:layout_marginTop="2dp"/>
         </LinearLayout>
@@ -103,14 +103,14 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:orientation="horizontal"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
         <TextView
             android:id="@+id/tabInfo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Información"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="13sp"
             android:gravity="center"
             android:background="@drawable/tab_bottom_indicator"/>
@@ -120,7 +120,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Pedidos"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="13sp"
             android:gravity="center"/>
         <TextView
@@ -129,7 +129,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Direcciones"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="13sp"
             android:gravity="center"/>
     </LinearLayout>
@@ -151,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Información personal"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp"/>
@@ -159,7 +159,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="16dp">
                 <LinearLayout
@@ -169,50 +169,196 @@
                     android:padding="14dp">
 
                     <!-- Fila info -->
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
-                        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_person" app:tint="#8899AA" android:layout_marginEnd="10dp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Nombres" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvNombres" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Juan Carlos" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/state_inactive"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Nombres"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvNombres"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Juan Carlos"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp"/>
                     </LinearLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E2A45"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_input"/>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
-                        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_person" app:tint="#8899AA" android:layout_marginEnd="10dp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Apellidos" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvApellidos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pérez Gómez" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/state_inactive"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Apellidos"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvApellidos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pérez Gómez"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp"/>
                     </LinearLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E2A45"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_input"/>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
-                        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_email" app:tint="#8899AA" android:layout_marginEnd="10dp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Teléfono" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvTelefono" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+51 987 654 321" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_email"
+                            app:tint="@color/state_inactive"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Teléfono"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvTelefono"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+51 987 654 321"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp"/>
                     </LinearLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E2A45"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_input"/>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
-                        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_lock" app:tint="#8899AA" android:layout_marginEnd="10dp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="DNI" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvDni" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12345678" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_lock"
+                            app:tint="@color/state_inactive"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="DNI"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvDni"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12345678"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp"/>
                     </LinearLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E2A45"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_input"/>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
-                        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_calendar" app:tint="#8899AA" android:layout_marginEnd="10dp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Fecha de registro" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvFecha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15 May 2024" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_calendar"
+                            app:tint="@color/state_inactive"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Fecha de registro"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvFecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 May 2024"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp"/>
                     </LinearLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E2A45"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_input"/>
 
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="8dp">
-                        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_person" app:tint="#8899AA" android:layout_marginEnd="10dp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Estado" android:textColor="#8899AA" android:textSize="13sp"/>
-                        <TextView android:id="@+id/tvEstado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Activo" android:textColor="#4CAF50" android:textSize="13sp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/state_inactive"
+                            android:layout_marginEnd="10dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Estado"
+                            android:textColor="@color/state_inactive"
+                            android:textSize="13sp"/>
+                        <TextView
+                            android:id="@+id/tvEstado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Activo"
+                            android:textColor="@color/state_active"
+                            android:textSize="13sp"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -223,7 +369,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Dirección principal"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp"/>
@@ -231,7 +377,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="16dp">
                 <LinearLayout
@@ -244,14 +390,14 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:src="@drawable/ic_location"
-                        app:tint="#8899AA"
+                        app:tint="@color/state_inactive"
                         android:layout_marginEnd="10dp"/>
                     <TextView
                         android:id="@+id/tvDireccion"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Av. Los Próceres 123, Lima&#10;Lima, Perú"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="13sp"
                         android:lineSpacingExtra="3dp"/>
                 </LinearLayout>
@@ -262,7 +408,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notas del administrador"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp"/>
@@ -270,7 +416,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="16dp">
                 <LinearLayout
@@ -283,7 +429,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Cliente frecuente, sin observaciones."
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="13sp"
                         android:layout_marginBottom="8dp"/>
                     <TextView
@@ -291,7 +437,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Última actualización: 20 May 2024"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="11sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -303,10 +449,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:text="Editar información"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 app:icon="@drawable/ic_edit"
-                app:iconTint="#1E90FF"
-                app:strokeColor="#1E90FF"
+                app:iconTint="@color/accent_blue"
+                app:strokeColor="@color/accent_blue"
                 app:cornerRadius="10dp"
                 android:layout_marginBottom="16dp"/>
 

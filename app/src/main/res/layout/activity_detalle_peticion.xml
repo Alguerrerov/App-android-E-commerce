@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0D1B2A">
+    android:background="@color/bg_screen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="←"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="22sp"
                 android:layout_marginEnd="12dp"/>
 
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Detalle de petición"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
         </LinearLayout>
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="14dp"
             android:layout_marginBottom="12dp">
 
@@ -57,7 +57,7 @@
                     android:id="@+id/tvTipo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="14sp"/>
 
@@ -65,14 +65,14 @@
                     android:id="@+id/tvVendedor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/tvFecha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -80,7 +80,7 @@
                 android:id="@+id/tvEstado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="11sp"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"/>
@@ -91,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Información del vendedor"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="8dp"/>
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="14dp"
             android:layout_marginBottom="12dp">
 
@@ -111,7 +111,7 @@
                 android:gravity="center"
                 android:text="👤"
                 android:textSize="22sp"
-                android:background="#2E3D4D"
+                android:background="@color/bg_item"
                 android:layout_marginEnd="12dp"/>
 
             <LinearLayout
@@ -124,7 +124,7 @@
                     android:id="@+id/tvNombreVendedor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="15sp"/>
 
@@ -132,14 +132,14 @@
                     android:id="@+id/tvEmailVendedor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/tvTelefonoVendedor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -147,7 +147,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="✓ Vendedor verificado"
-                android:textColor="#4CAF50"
+                android:textColor="@color/state_active"
                 android:textSize="11sp"/>
         </LinearLayout>
 
@@ -164,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Información de la tienda"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="8dp"/>
@@ -173,44 +173,86 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#1E2D3D"
+                android:background="@color/bg_section"
                 android:padding="14dp">
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Nombre de la tienda"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvNombreTienda" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nombre de la tienda"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvNombreTienda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Categoría"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvCategoriaTienda" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Categoría"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvCategoriaTienda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Dirección"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvDireccionTienda" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dirección"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvDireccionTienda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Descripción"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvDescripcionTienda" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF"
-                        android:textSize="13sp" android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Descripción"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvDescripcionTienda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:layout_weight="1"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -228,7 +270,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cambios solicitados"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="8dp"/>
@@ -237,7 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#1E2D3D"
+                android:background="@color/bg_section"
                 android:padding="14dp">
 
                 <!-- Encabezado tabla -->
@@ -247,15 +289,27 @@
                     android:orientation="horizontal"
                     android:layout_marginBottom="8dp">
 
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text=""
-                        android:textColor="#8899AA" android:textSize="12sp"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Información actual"
-                        android:textColor="#8899AA" android:textSize="12sp"/>
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Información solicitada"
-                        android:textColor="#8899AA" android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/state_inactive"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Información actual"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Información solicitada"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="12sp"/>
                 </LinearLayout>
 
                 <!-- Filas dinámicas -->
@@ -270,7 +324,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Motivo de la modificación"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:layout_marginTop="12dp"
@@ -280,7 +334,7 @@
                 android:id="@+id/tvMotivoCambio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#AAAAAA"
+                android:textColor="@color/text_tertiary"
                 android:textSize="13sp"
                 android:background="#1E2D3D"
                 android:padding="12dp"/>
@@ -299,7 +353,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Información del producto"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="8dp"/>
@@ -308,71 +362,147 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#1E2D3D"
+                android:background="@color/accent_blue"
                 android:padding="14dp">
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Nombre del producto"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvNombreProducto" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Nombre del producto"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvNombreProducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Categoría"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvCategoriaProducto" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Categoría"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvCategoriaProducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Marca"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvMarca" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Marca"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvMarca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="SKU"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvSku" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SKU"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvSku"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Precio"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvPrecioProducto" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Precio"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvPrecioProducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:orientation="horizontal" android:layout_marginBottom="8dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Stock inicial"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvStockProducto" android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Stock inicial"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvStockProducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:text="Descripción"
-                        android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvDescripcionProducto" android:layout_width="0dp"
-                        android:layout_height="wrap_content" android:layout_weight="1"
-                        android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Descripción"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvDescripcionProducto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -390,7 +520,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Notas del vendedor"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="8dp"/>
@@ -399,9 +529,9 @@
                 android:id="@+id/tvNotas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#AAAAAA"
+                android:textColor="@color/text_tertiary"
                 android:textSize="13sp"
-                android:background="#1E2D3D"
+                android:background="@color/bg_section"
                 android:padding="12dp"/>
         </LinearLayout>
 
@@ -410,7 +540,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Actualizar estado"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="8dp"/>
@@ -419,7 +549,7 @@
             android:id="@+id/spinnerEstado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E2D3D"
+            android:background="@color/bg_section"
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
@@ -428,8 +558,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Actualizar estado"
-            android:backgroundTint="#1E90FF"
-            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/accent_blue"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
@@ -438,7 +568,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cancelar"
-            android:textColor="#AAAAAA"
+            android:textColor="@color/text_tertiary"
             android:gravity="center"
             android:padding="12dp"/>
 

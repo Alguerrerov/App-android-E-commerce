@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0D1B2A">
+    android:background="@color/bg_screen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="←"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="22sp"
                 android:layout_marginEnd="12dp"/>
 
@@ -32,9 +32,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Detalle del pedido"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
+
         </LinearLayout>
 
         <!-- Número y estado -->
@@ -43,7 +44,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="16dp"
             android:layout_marginBottom="12dp">
 
@@ -57,7 +58,8 @@
                     android:id="@+id/tvNumeroPedido"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
+                    android:text="#PED-1058"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -65,7 +67,8 @@
                     android:id="@+id/tvFecha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:text="16 May 2024 · 10:30 a.m."
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
 
@@ -73,10 +76,12 @@
                 android:id="@+id/tvEstado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
+                android:text="Pendiente"
+                android:textColor="@color/text_primary"
                 android:textSize="11sp"
                 android:paddingHorizontal="12dp"
-                android:paddingVertical="4dp"/>
+                android:paddingVertical="4dp"
+                android:background="@color/state_pending"/>
         </LinearLayout>
 
         <!-- Cliente -->
@@ -85,7 +90,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="16dp"
             android:layout_marginBottom="12dp">
 
@@ -99,7 +104,8 @@
                     android:id="@+id/tvNombreCliente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
+                    android:text="Juan Pérez"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="15sp"/>
 
@@ -107,16 +113,26 @@
                     android:id="@+id/tvEmailCliente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:text="✉ juan.perez@gmail.com"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
 
                 <TextView
                     android:id="@+id/tvTelefonoCliente"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#8899AA"
+                    android:text="📞 987 654 321"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="💬"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@color/accent_blue"/>
         </LinearLayout>
 
         <!-- Productos -->
@@ -125,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Productos (3)"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="8dp"/>
@@ -135,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="12dp"
             android:layout_marginBottom="12dp"/>
 
@@ -144,37 +160,75 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="16dp"
             android:layout_marginBottom="12dp">
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="6dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Subtotal" android:textColor="#8899AA"/>
-                <TextView android:id="@+id/tvSubtotal" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#FFFFFF"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Subtotal"
+                    android:textColor="@color/state_inactive"/>
+                <TextView
+                    android:id="@+id/tvSubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/ 350.00"
+                    android:textColor="@color/text_primary"/>
             </LinearLayout>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:layout_marginBottom="6dp">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Envío" android:textColor="#8899AA"/>
-                <TextView android:id="@+id/tvEnvio" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#FFFFFF"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Envío"
+                    android:textColor="@color/state_inactive"/>
+                <TextView
+                    android:id="@+id/tvEnvio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/ 10.00"
+                    android:textColor="@color/text_primary"/>
             </LinearLayout>
 
-            <View android:layout_width="match_parent" android:layout_height="1dp"
-                android:background="#2E3D4D" android:layout_marginVertical="8dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator"
+                android:layout_marginVertical="8dp"/>
 
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="Total" android:textColor="#FFFFFF"
-                    android:textStyle="bold" android:textSize="16sp"/>
-                <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:textColor="#1E90FF"
-                    android:textStyle="bold" android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S/ 360.00"
+                    android:textColor="@color/accent_blue"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -183,7 +237,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Información de envío"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="8dp"/>
@@ -192,7 +246,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="16dp"
             android:layout_marginBottom="12dp">
 
@@ -200,7 +254,8 @@
                 android:id="@+id/tvDireccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#AAAAAA"
+                android:text="📍 Av. Los Próceres 123, Lima\n    Lima, Perú"
+                android:textColor="@color/text_tertiary"
                 android:textSize="13sp"
                 android:layout_marginBottom="6dp"/>
 
@@ -208,7 +263,8 @@
                 android:id="@+id/tvReferencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#AAAAAA"
+                android:text="☑ Referencia: Frente al parque principal"
+                android:textColor="@color/text_tertiary"
                 android:textSize="13sp"/>
         </LinearLayout>
 
@@ -217,7 +273,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Método de pago"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="8dp"/>
@@ -227,7 +283,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="16dp"
             android:layout_marginBottom="12dp">
 
@@ -241,7 +297,7 @@
                 android:id="@+id/tvMetodoPago"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#AAAAAA"
+                android:textColor="@color/text_tertiary"
                 android:textSize="13sp"/>
         </LinearLayout>
 
@@ -250,7 +306,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Estado del pedido"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textStyle="bold"
             android:textSize="15sp"
             android:layout_marginBottom="8dp"/>
@@ -259,7 +315,7 @@
             android:id="@+id/spinnerEstado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E2D3D"
+            android:background="@color/bg_item"
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
@@ -268,8 +324,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Actualizar estado"
-            android:backgroundTint="#1E90FF"
-            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/accent_blue"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
@@ -278,7 +334,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cancelar"
-            android:textColor="#AAAAAA"
+            android:textColor="@color/text_tertiary"
             android:gravity="center"
             android:padding="12dp"/>
 

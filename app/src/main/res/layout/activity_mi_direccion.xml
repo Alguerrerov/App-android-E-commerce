@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:layout_marginEnd="12dp"/>
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mi dirección"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+ Agregar dirección"
-        android:textColor="#1E90FF"
+        android:textColor="@color/text_blue"
         android:textSize="13sp"
         android:gravity="end"
         android:paddingHorizontal="16dp"
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="16dp"
                 android:layout_marginBottom="12dp">
 
@@ -84,8 +84,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Casa"
-                        android:textColor="#FFFFFF"
+                        android:text="casa"
+                        android:textColor="@color/text_primary"
                         android:textStyle="bold"
                         android:textSize="15sp"/>
 
@@ -93,22 +93,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Predeterminada"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/text_blue"
                         android:textSize="12sp"/>
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="calle falsa #123"
-                    android:textColor="#8899AA"
+                    android:text="cra 1234"
+                    android:textColor="@color/state_inactive"
                     android:textSize="13sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Region Andina, Colombia"
-                    android:textColor="#8899AA"
+                    android:text="region, pais etc."
+                    android:textColor="@color/state_inactive"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"/>
 
@@ -124,7 +124,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:background="#1A2A3A"
+                        android:background="@color/bg_item"
                         android:padding="10dp"
                         android:layout_marginEnd="8dp"
                         android:clickable="true"
@@ -134,7 +134,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="✏ Editar"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="13sp"/>
                     </LinearLayout>
 
@@ -145,7 +145,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:background="#1A2A3A"
+                        android:background="@color/bg_item"
                         android:padding="10dp"
                         android:clickable="true"
                         android:focusable="true">
@@ -154,7 +154,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="🗑 Eliminar"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="13sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -165,7 +165,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="16dp"
                 android:layout_marginBottom="12dp">
 
@@ -173,7 +173,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Trabajo"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="15sp"
                     android:layout_marginBottom="6dp"/>
@@ -182,14 +182,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="calle falsa #321"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="13sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Region Andina, Colombia"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="13sp"
                     android:layout_marginBottom="12dp"/>
 
@@ -205,7 +205,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:background="#1A2A3A"
+                        android:background="@color/bg_item"
                         android:padding="10dp"
                         android:layout_marginEnd="8dp"
                         android:clickable="true"
@@ -215,7 +215,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="✏ Editar"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="13sp"/>
                     </LinearLayout>
 
@@ -226,7 +226,7 @@
                         android:layout_weight="1"
                         android:orientation="horizontal"
                         android:gravity="center"
-                        android:background="#1A2A3A"
+                        android:background="@color/bg_item"
                         android:padding="10dp"
                         android:clickable="true"
                         android:focusable="true">
@@ -235,7 +235,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="🗑 Eliminar"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="13sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -249,8 +249,8 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:text="Guardar cambios"
-        android:backgroundTint="#1E90FF"
-        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/text_blue"
+        android:textColor="@color/text_primary"
         android:textStyle="bold"
         android:layout_margin="16dp"/>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    app:cardBackgroundColor="#0D2137"
+    app:cardBackgroundColor="@color/bg_card"
     app:cardCornerRadius="10dp">
 
     <LinearLayout
@@ -19,7 +19,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="70dp"
             android:layout_height="70dp"
-            app:cardBackgroundColor="#1E2A45"
+            app:cardBackgroundColor="@color/bg_input"
             app:cardCornerRadius="8dp"
             android:layout_marginEnd="12dp">
             <ImageView
@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_products"
-                app:tint="#8899AA"
+                app:tint="@color/state_inactive"
                 android:scaleType="centerInside"
                 android:padding="10dp"/>
         </androidx.cardview.widget.CardView>
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Filtro de aceite Mann W712"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="13sp"
                     android:textStyle="bold"
                     android:maxLines="2"/>
@@ -59,7 +59,7 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@drawable/ic_close"
-                    app:tint="#8899AA"
+                    app:tint="@color/state_inactive"
                     android:background="?attr/selectableItemBackgroundBorderless"/>
             </LinearLayout>
 
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SKU: FIL-MANN-W712"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="11sp"
                 android:layout_marginBottom="2dp"/>
 
@@ -77,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="En stock"
-                android:textColor="#4CAF50"
+                android:textColor="@color/state_active"
                 android:textSize="11sp"
                 android:layout_marginBottom="8dp"/>
 
@@ -94,7 +94,7 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:text="−"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:gravity="center"
                     android:background="#1E2A45"
@@ -106,7 +106,7 @@
                     android:layout_width="36dp"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
@@ -117,7 +117,7 @@
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:text="+"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:gravity="center"
                     android:background="#1E2A45"
@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="S/ 45.00"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:gravity="end"/>

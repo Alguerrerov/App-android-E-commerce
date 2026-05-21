@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- TopBar -->
     <LinearLayout
@@ -14,20 +14,20 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="12dp"
-        android:background="#0A1628">
+        android:background="@color/bg_screen">
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Carrito"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
@@ -36,7 +36,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_delete"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
     </LinearLayout>
 
@@ -48,18 +48,18 @@
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="10dp"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
         <ImageView
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:src="@drawable/ic_verified"
-            app:tint="#4CAF50"
+            app:tint="@color/state_active"
             android:layout_marginEnd="8dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Envío gratis por compras mayores a S/ 200.00"
-            android:textColor="#4CAF50"
+            android:textColor="@color/state_active"
             android:textSize="12sp"/>
     </LinearLayout>
 
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,14 +92,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Subtotal (0 productos)"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"/>
             <TextView
                 android:id="@+id/tvSubtotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S/ 0.00"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="13sp"/>
         </LinearLayout>
 
@@ -113,13 +113,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Descuento"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="- S/ 0.00"
-                android:textColor="#4CAF50"
+                android:textColor="@color/state_active"
                 android:textSize="13sp"/>
         </LinearLayout>
 
@@ -133,20 +133,20 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Envío"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S/ 15.00"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="13sp"/>
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#1E2A45"
+            android:background="@color/bg_btn"
             android:layout_marginBottom="10dp"/>
 
         <LinearLayout
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Total"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
             <TextView
@@ -167,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S/ 15.00"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
         </LinearLayout>
@@ -176,7 +176,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ⓘ Puedes eliminar o actualizar las cantidades de los productos."
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="11sp"
             android:layout_marginBottom="12dp"/>
 
@@ -185,12 +185,12 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:text="Proceder al pago"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="15sp"
             android:textStyle="bold"
             app:icon="@drawable/ic_cart"
-            app:iconTint="#FFFFFF"
-            app:backgroundTint="#1E90FF"
+            app:iconTint="@color/text_primary"
+            app:backgroundTint="@color/accent_blue"
             app:cornerRadius="10dp"/>
     </LinearLayout>
 

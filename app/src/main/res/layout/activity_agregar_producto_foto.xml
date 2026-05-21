@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- TopBar -->
     <LinearLayout
@@ -14,20 +14,20 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="12dp"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Agregar producto"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
@@ -42,25 +42,89 @@
         android:padding="16dp">
 
         <!-- Paso 1 completado -->
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
-            <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="✓" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:gravity="center" android:background="@drawable/step_done"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Información" android:textColor="#8899AA" android:textSize="10sp" android:layout_marginTop="4dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="✓"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/step_done"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información"
+                android:textColor="@color/state_inactive"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
 
-        <View android:layout_width="50dp" android:layout_height="2dp" android:background="#1E90FF" android:layout_marginHorizontal="6dp" android:layout_marginBottom="16dp"/>
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@color/accent_blue"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginBottom="16dp"/>
 
         <!-- Paso 2 activo -->
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
-            <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="2" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" android:gravity="center" android:background="@drawable/step_active"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fotos" android:textColor="#1E90FF" android:textSize="10sp" android:layout_marginTop="4dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="2"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/step_active"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotos"
+                android:textColor="@color/accent_blue"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
 
-        <View android:layout_width="50dp" android:layout_height="2dp" android:background="#1E2A45" android:layout_marginHorizontal="6dp" android:layout_marginBottom="16dp"/>
+        <View
+            android:layout_width="50dp"
+            android:layout_height="2dp"
+            android:background="@color/bg_input"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginBottom="16dp"/>
 
         <!-- Paso 3 -->
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
-            <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="3" android:textColor="#8899AA" android:textSize="14sp" android:textStyle="bold" android:gravity="center" android:background="@drawable/step_inactive"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resumen" android:textColor="#8899AA" android:textSize="10sp" android:layout_marginTop="4dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="3"
+                android:textColor="@color/state_inactive"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/step_inactive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen"
+                android:textColor="@color/state_inactive"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -79,7 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Fotos del producto"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp"/>
@@ -87,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Agrega fotos claras desde diferentes ángulos."
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="12sp"
                 android:layout_marginBottom="16dp"/>
 
@@ -96,7 +160,7 @@
                 android:id="@+id/cardAgregarFoto"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -110,20 +174,20 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/ic_camera"
-                        app:tint="#1E90FF"
+                        app:tint="@color/accent_blue"
                         android:layout_marginBottom="8dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Agregar foto"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/accent_blue"
                         android:textSize="14sp"
                         android:textStyle="bold"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Toca para seleccionar o tomar foto"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="11sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -132,7 +196,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="16dp">
                 <LinearLayout
@@ -144,13 +208,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Consejos:"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Usa fotos claras y bien iluminadas" android:textColor="#8899AA" android:textSize="12sp" android:layout_marginBottom="4dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• Muestra el producto desde varios ángulos" android:textColor="#8899AA" android:textSize="12sp" android:layout_marginBottom="4dp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="• La primera foto será la imagen principal" android:textColor="#8899AA" android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Usa fotos claras y bien iluminadas"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• Muestra el producto desde varios ángulos"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="• La primera foto será la imagen principal"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="12sp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -169,8 +250,8 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:text="Anterior"
-            android:textColor="#8899AA"
-            app:strokeColor="#8899AA"
+            android:textColor="@color/state_inactive"
+            app:strokeColor="@color/state_inactive"
             app:cornerRadius="0dp"/>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSiguiente"
@@ -178,9 +259,9 @@
             android:layout_height="52dp"
             android:layout_weight="1"
             android:text="Siguiente"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
-            app:backgroundTint="#1E90FF"
+            app:backgroundTint="@color/accent_blue"
             app:cornerRadius="0dp"/>
     </LinearLayout>
 

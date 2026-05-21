@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    app:cardBackgroundColor="#0D2137"
+    app:cardBackgroundColor="@color/bg_card"
     app:cardCornerRadius="10dp"
     android:clickable="true"
     android:focusable="true"
@@ -24,8 +24,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/ic_products"
-            app:tint="#8899AA"
-            android:background="#1E2A45"
+            app:tint="@color/text_secondary"
+            android:background="@color/bg_input"
             android:padding="10dp"
             android:scaleType="centerCrop"
             android:layout_marginEnd="12dp"/>
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Filtro de Aceite Mann W610/3"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:maxLines="2"/>
@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Filtros"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/text_secondary"
                     android:textSize="11sp"
                     android:layout_marginEnd="8dp"/>
                 <TextView
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$27.900"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="12sp"
                     android:textStyle="bold"
                     android:layout_marginEnd="8dp"/>
@@ -74,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="150"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/text_secondary"
                     android:textSize="11sp"/>
             </LinearLayout>
         </LinearLayout>
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Activo"
-            android:textColor="#4CAF50"
+            android:textColor="@color/state_active"
             android:textSize="11sp"
             android:paddingHorizontal="8dp"
             android:paddingVertical="3dp"

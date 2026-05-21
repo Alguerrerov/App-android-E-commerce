@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A1628"
+    android:background="@color/bg_screen"
     android:fillViewport="true">
 
     <LinearLayout
@@ -19,20 +19,20 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:paddingHorizontal="12dp"
-            android:background="#0D2137">
+            android:background="@color/bg_card">
             <ImageButton
                 android:id="@+id/btnBack"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_arrow_back"
-                app:tint="#FFFFFF"
+                app:tint="@color/text_primary"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Detalle del producto"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginStart="8dp"/>
@@ -41,7 +41,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/ic_more_vert"
-                app:tint="#FFFFFF"
+                app:tint="@color/text_primary"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
 
@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:src="@drawable/ic_products"
-            app:tint="#8899AA"
-            android:background="#0D2137"
+            app:tint="@color/state_inactive"
+            android:background="@color/bg_item"
             android:scaleType="centerInside"
             android:padding="30dp"/>
 
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Filtro de aceite Mann W610/3"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
                 <TextView
@@ -84,9 +84,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Activo"
-                    android:textColor="#4CAF50"
+                    android:textColor="@color/state_active"
                     android:textSize="11sp"
-                    android:background="#1A4CAF50"
+                    android:background="@color/text_green"
                     android:paddingHorizontal="10dp"
                     android:paddingVertical="4dp"/>
             </LinearLayout>
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Categoría: Filtros de aceite"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="12sp"
                 android:layout_marginBottom="12dp"/>
 
@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="S/ 29.90"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"/>
@@ -116,7 +116,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#0D2137"
+                app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="10dp"
                 android:layout_marginBottom="16dp">
                 <LinearLayout
@@ -137,14 +137,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="25 unidades"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="13sp"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Stock disponible"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="10sp"/>
                     </LinearLayout>
 
@@ -160,14 +160,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="56"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="13sp"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Vendidos"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="10sp"/>
                     </LinearLayout>
 
@@ -183,14 +183,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="4.8 (32)"
-                            android:textColor="#EF9F27"
+                            android:textColor="@color/state_pending"
                             android:textSize="13sp"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Vistas"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="10sp"/>
                     </LinearLayout>
 
@@ -202,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Descripción"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="6dp"/>
@@ -211,7 +211,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Filtro de aceite original Mann W610/3. Alta eficiencia de filtrado y mayor durabilidad. Compatible con diversos modelos de vehículos."
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"
                 android:lineSpacingExtra="4dp"
                 android:layout_marginBottom="6dp"/>
@@ -220,7 +220,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ver más"
-                android:textColor="#1E90FF"
+                android:textColor="@color/text_blue"
                 android:textSize="12sp"
                 android:clickable="true"
                 android:focusable="true"
@@ -231,7 +231,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Información adicional"
-                android:textColor="#1E90FF"
+                android:textColor="@color/text_blue"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="10dp"/>
@@ -241,23 +241,168 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginBottom="20dp">
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Marca" android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvMarca" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mann" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Marca"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvMarca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mann"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Código" android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:id="@+id/tvCodigo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="W610/3" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Código"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvCodigo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="W610/3"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Peso" android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.25 kg" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Peso"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.25 kg"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="6dp">
-                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dimensiones" android:textColor="#8899AA" android:textSize="13sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8 x 8 x 9 cm" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="6dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dimensiones"
+                        android:textColor="@color/state_inactive"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8 x 8 x 9 cm"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"/>
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Vendedor y tienda -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendedor"
+                android:textColor="@color/accent_blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <!-- Avatar vendedor -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_person"
+                        app:tint="@color/text_primary"
+                        android:background="#1E3A5F"
+                        android:padding="10dp"
+                        android:layout_marginEnd="12dp"/>
+
+                    <!-- Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvVendedorNombre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Carlos López"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="3dp">
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/ic_products"
+                                app:tint="@color/state_inactive"
+                                android:layout_marginEnd="4dp"/>
+                            <TextView
+                                android:id="@+id/tvTienda"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AutoParts Store Central"
+                                android:textColor="@color/state_inactive"
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Badge vendedor -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vendedor"
+                        android:textColor="@color/accent_blue"
+                        android:textSize="10sp"
+                        android:background="@color/bg_avatar"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="3dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- Botones Editar / Desactivar / Eliminar -->
             <LinearLayout
@@ -271,11 +416,11 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:text="Editar"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="13sp"
                     app:icon="@drawable/ic_edit"
-                    app:iconTint="#FFFFFF"
-                    app:backgroundTint="#1E90FF"
+                    app:iconTint="@color/text_primary"
+                    app:backgroundTint="@color/text_blue"
                     app:cornerRadius="8dp"
                     android:layout_marginEnd="6dp"/>
                 <com.google.android.material.button.MaterialButton
@@ -285,9 +430,9 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:text="Desactivar"
-                    android:textColor="#EF9F27"
+                    android:textColor="@color/state_pending"
                     android:textSize="13sp"
-                    app:strokeColor="#EF9F27"
+                    app:strokeColor="@color/state_pending"
                     app:cornerRadius="8dp"
                     android:layout_marginEnd="6dp"/>
                 <com.google.android.material.button.MaterialButton
@@ -297,9 +442,9 @@
                     android:layout_height="48dp"
                     android:layout_weight="1"
                     android:text="Eliminar"
-                    android:textColor="#E24B4A"
+                    android:textColor="@color/state_cancelled"
                     android:textSize="13sp"
-                    app:strokeColor="#E24B4A"
+                    app:strokeColor="@color/state_cancelled"
                     app:cornerRadius="8dp"/>
             </LinearLayout>
 

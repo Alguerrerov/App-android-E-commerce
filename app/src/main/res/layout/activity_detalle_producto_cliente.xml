@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- TopBar -->
     <LinearLayout
@@ -14,20 +14,20 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="12dp"
-        android:background="#1E90FF">
+        android:background="@color/text_blue">
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Detalles del producto"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="17sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
@@ -47,14 +47,14 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="#0D2137">
+                android:background="@color/bg_card">
 
                 <ImageView
                     android:id="@+id/ivProducto"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_products"
-                    app:tint="#8899AA"
+                    app:tint="@color/state_inactive"
                     android:scaleType="centerInside"
                     android:padding="20dp"/>
 
@@ -64,9 +64,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1/5"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="12sp"
-                    android:background="#66000000"
+                    android:background="@color/bg_f"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="4dp"
                     android:layout_gravity="bottom|start"
@@ -84,16 +84,16 @@
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:src="@drawable/ic_share"
-                        app:tint="#FFFFFF"
-                        android:background="#44000000"
+                        app:tint="@color/text_primary"
+                        android:background="@color/bg_eqn"
                         android:layout_marginEnd="6dp"/>
                     <ImageButton
                         android:id="@+id/btnFavorito"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:src="@drawable/ic_favorite"
-                        app:tint="#FFFFFF"
-                        android:background="#44000000"/>
+                        app:tint="@color/text_primary"
+                        android:background="@color/bg_eqn"/>
                 </LinearLayout>
 
             </FrameLayout>
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pastillas de freno"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="8dp"/>
@@ -128,7 +128,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="★★★★☆"
-                        android:textColor="#EF9F27"
+                        android:textColor="@color/state_pending"
                         android:textSize="18sp"/>
                     <TextView
                         android:id="@+id/tvRating"
@@ -145,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$XX.XXX"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="4dp"/>
@@ -156,7 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="En stock"
-                    android:textColor="#4CAF50"
+                    android:textColor="@color/state_active"
                     android:textSize="13sp"
                     android:layout_marginBottom="16dp"/>
 
@@ -164,7 +164,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E2A45"
+                    android:background="@color/bg_input"
                     android:layout_marginBottom="16dp"/>
 
                 <!-- Compatibilidad -->
@@ -172,7 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="compatibilidad"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="8dp"/>
@@ -182,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="vehículo 1\nvehículo 2"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="13sp"
                     android:lineSpacingExtra="4dp"
                     android:layout_marginBottom="16dp"/>
@@ -191,7 +191,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#1E2A45"
+                    android:background="@color/bg_input"
                     android:layout_marginBottom="16dp"/>
 
                 <!-- Cantidad -->
@@ -199,7 +199,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cantidad"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="12dp"/>
@@ -217,11 +217,11 @@
                         android:layout_width="44dp"
                         android:layout_height="44dp"
                         android:text="-"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="20sp"
-                        app:backgroundTint="#0D2137"
+                        app:backgroundTint="@color/bg_card"
                         app:cornerRadius="8dp"
-                        app:strokeColor="#1E2A45"
+                        app:strokeColor="@color/bg_input"
                         app:strokeWidth="1dp"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:textStyle="bold"/>
@@ -232,7 +232,7 @@
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -244,11 +244,11 @@
                         android:layout_width="44dp"
                         android:layout_height="44dp"
                         android:text="+"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="20sp"
-                        app:backgroundTint="#0D2137"
+                        app:backgroundTint="@color/bg_card"
                         app:cornerRadius="8dp"
-                        app:strokeColor="#1E2A45"
+                        app:strokeColor="@color/bg_input"
                         app:strokeWidth="1dp"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:textStyle="bold"/>
@@ -260,9 +260,9 @@
                         android:layout_height="48dp"
                         android:layout_weight="1"
                         android:text="agregar al carrito"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="13sp"
-                        app:backgroundTint="#1E90FF"
+                        app:backgroundTint="@color/text_blue"
                         app:cornerRadius="8dp"
                         android:layout_marginStart="12dp"/>
 
@@ -274,10 +274,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:text="Proceder al pago"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_dark"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:backgroundTint="#EF9F27"
+                    app:backgroundTint="@color/state_pending"
                     app:cornerRadius="10dp"
                     android:layout_marginBottom="16dp"/>
 

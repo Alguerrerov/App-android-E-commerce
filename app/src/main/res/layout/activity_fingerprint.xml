@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#0D1B2A"
+    android:background="@color/bg_screen"
     android:padding="40dp">
 
     <ImageView
@@ -13,14 +13,14 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:src="@drawable/ic_fingerprint"
-        app:tint="#FFFFFF"
+        app:tint="@color/text_primary"
         android:layout_marginBottom="40dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Verifica tu huella"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text_primary"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp"/>
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Toca el sensor para continuar"
-        android:textColor="#AAAAAA"
+        android:textColor="@color/text_tertiary"
         android:textSize="14sp"
         android:layout_marginBottom="40dp"/>
 
@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Usar contraseña en su lugar"
-        android:textColor="#1E90FF"
+        android:textColor="@color/accent_blue"
         android:textSize="14sp"
         android:clickable="true"
         android:focusable="true"/>

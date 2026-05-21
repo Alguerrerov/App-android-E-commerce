@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:layout_marginEnd="12dp"/>
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Notificaciones"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Preferencias de notificaciones"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp"/>
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="4dp"
                 android:layout_marginBottom="16dp">
 
@@ -84,7 +84,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Ofertas y promociones"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -92,7 +92,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Recibe ofertas exclusivas y descuentos"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -103,7 +103,10 @@
                         android:checked="true"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Actualizaciones de pedidos -->
                 <LinearLayout
@@ -123,7 +126,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Actualizaciones de pedidos"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -131,7 +134,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Recibe información sobre tus pedidos"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -142,7 +145,10 @@
                         android:checked="true"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Nuevos productos -->
                 <LinearLayout
@@ -162,7 +168,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Nuevos productos"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -170,7 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Entérate de nuevos productos"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -181,7 +187,9 @@
                         android:checked="true"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Recordatorios de carrito -->
                 <LinearLayout
@@ -201,7 +209,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Recordatorios de carrito"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -209,7 +217,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Te avisaremos si dejas productos en tu carrito"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -220,7 +228,10 @@
                         android:checked="false"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/state_inactive"/>
 
                 <!-- Mensajes y soporte -->
                 <LinearLayout
@@ -240,7 +251,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mensajes y soporte"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -248,7 +259,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Recibe mensajes importantes de soporte"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -259,7 +270,10 @@
                         android:checked="true"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Noticias y novedades -->
                 <LinearLayout
@@ -279,7 +293,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Noticias y novedades"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 
@@ -287,7 +301,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Recibe noticias y novedades de la app"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -312,7 +326,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ℹ "
-                    android:textColor="#1E90FF"
+                    android:textColor="@color/accent_blue"
                     android:textSize="16sp"
                     android:layout_marginEnd="8dp"/>
 
@@ -321,7 +335,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Puedes cambiar tus preferencias en cualquier momento."
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="12sp"/>
             </LinearLayout>
         </LinearLayout>

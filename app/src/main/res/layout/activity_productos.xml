@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- TopBar -->
     <LinearLayout
@@ -14,20 +14,20 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="12dp"
-        android:background="#0D2137">
+        android:background="@color/bg_card">
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_arrow_back"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mis Productos"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginStart="8dp"/>
@@ -36,7 +36,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_notifications"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
     </LinearLayout>
 
@@ -54,7 +54,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Todos (56)"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="12sp"
             android:gravity="center"
             android:background="@drawable/tab_selector"
@@ -66,7 +66,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Activos (48)"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="12sp"
             android:gravity="center"
             android:background="@drawable/tab_selector"
@@ -78,7 +78,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Inactivos (8)"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="12sp"
             android:gravity="center"
             android:background="@drawable/tab_selector"
@@ -100,11 +100,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Buscar producto..."
-            app:hintTextColor="#8899AA"
-            app:boxStrokeColor="#1E2A45"
-            app:boxBackgroundColor="#0D2137"
+            app:hintTextColor="@color/state_inactive"
+            app:boxStrokeColor="@color/bg_input"
+            app:boxBackgroundColor="@color/bg_card"
             app:startIconDrawable="@drawable/ic_search"
-            app:startIconTint="#8899AA"
+            app:startIconTint="@color/state_inactive"
             app:boxCornerRadiusTopStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
@@ -114,7 +114,7 @@
                 android:id="@+id/etSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:inputType="text"/>
         </com.google.android.material.textfield.TextInputLayout>
         <ImageButton
@@ -122,7 +122,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_filter"
-            app:tint="#FFFFFF"
+            app:tint="@color/text_primary"
             android:background="?attr/selectableItemBackgroundBorderless"/>
     </LinearLayout>
 
@@ -132,10 +132,10 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="+ Nuevo producto"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text_primary"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:backgroundTint="#1A5C2A"
+        app:backgroundTint="@color/bg_btngreen"
         app:cornerRadius="10dp"
         android:layout_marginHorizontal="12dp"
         android:layout_marginBottom="10dp"/>

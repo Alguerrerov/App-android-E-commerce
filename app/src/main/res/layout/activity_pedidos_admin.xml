@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0D1B2A">
+    android:background="@color/bg_card">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Pedidos"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:textStyle="bold"/>
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Peticiones"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="15sp"
             android:gravity="center"
             android:paddingBottom="8dp"/>
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Pedidos de clientes"
-            android:textColor="#8899AA"
+            android:textColor="@color/state_inactive"
             android:textSize="15sp"
             android:gravity="center"
             android:paddingBottom="8dp"/>
@@ -83,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Peticiones de vendedores"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_marginBottom="12dp"/>
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pedidos de clientes"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:layout_marginTop="20dp"
@@ -113,23 +113,23 @@
                     <LinearLayout android:id="@+id/cardTodos"
                         android:layout_width="0dp" android:layout_height="wrap_content"
                         android:layout_weight="1" android:orientation="vertical"
-                        android:gravity="center" android:background="#1E3A5F"
+                        android:gravity="center" android:background="@color/bg_avatar"
                         android:padding="10dp" android:layout_marginEnd="6dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Todos" android:textColor="#FFFFFF" android:textSize="11sp"/>
+                            android:text="Todos" android:textColor="@color/text_primary" android:textSize="11sp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="156" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp"/>
+                            android:text="156" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
                     </LinearLayout>
 
                     <LinearLayout android:id="@+id/cardPendientes"
                         android:layout_width="0dp" android:layout_height="wrap_content"
                         android:layout_weight="1" android:orientation="vertical"
-                        android:gravity="center" android:background="#1E2D3D"
+                        android:gravity="center" android:background="@color/bg_section"
                         android:padding="10dp" android:layout_marginEnd="6dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Pendientes" android:textColor="#E67E22" android:textSize="11sp"/>
+                            android:text="Pendientes" android:textColor="@color/state_pending" android:textSize="11sp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="24" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp"/>
+                            android:text="24" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
                     </LinearLayout>
 
                     <LinearLayout android:id="@+id/cardEnProceso"
@@ -138,20 +138,20 @@
                         android:gravity="center" android:background="#1E2D3D"
                         android:padding="10dp" android:layout_marginEnd="6dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="En proceso" android:textColor="#1E90FF" android:textSize="11sp"/>
+                            android:text="En proceso" android:textColor="@color/accent_blue" android:textSize="11sp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="48" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp"/>
+                            android:text="48" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
                     </LinearLayout>
 
                     <LinearLayout android:id="@+id/cardCompletados"
                         android:layout_width="0dp" android:layout_height="wrap_content"
                         android:layout_weight="1" android:orientation="vertical"
-                        android:gravity="center" android:background="#1E2D3D"
+                        android:gravity="center" android:background="@color/bg_section"
                         android:padding="10dp" android:layout_marginEnd="6dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Completados" android:textColor="#4CAF50" android:textSize="11sp"/>
+                            android:text="Completados" android:textColor="@color/state_active" android:textSize="11sp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="72" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp"/>
+                            android:text="72" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
                     </LinearLayout>
 
                     <LinearLayout android:id="@+id/cardCancelados"
@@ -160,9 +160,9 @@
                         android:gravity="center" android:background="#1E2D3D"
                         android:padding="10dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Cancelados" android:textColor="#E74C3C" android:textSize="11sp"/>
+                            android:text="Cancelados" android:textColor="@color/state_cancelled" android:textSize="11sp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="12" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp"/>
+                            android:text="12" android:textColor="@color/text_primary" android:textStyle="bold" android:textSize="18sp"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -193,8 +193,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="Buscar pedidos..."
-                    android:textColorHint="#8899AA"
-                    android:textColor="#FFFFFF"
+                    android:textColorHint="@color/state_inactive"
+                    android:textColor="@color/text_primary"
                     android:background="@null"/>
 
                 <TextView
@@ -218,26 +218,26 @@
 
                     <TextView android:id="@+id/subTabTodos"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Todos (156)" android:textColor="#FFFFFF"
-                        android:background="#1E90FF" android:paddingHorizontal="14dp"
+                        android:text="Todos (156)" android:textColor="@color/text_primary"
+                        android:background="@color/accent_blue" android:paddingHorizontal="14dp"
                         android:paddingVertical="6dp" android:layout_marginEnd="8dp"/>
 
                     <TextView android:id="@+id/subTabPendientes"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Pendientes (24)" android:textColor="#8899AA"
-                        android:background="#1E2D3D" android:paddingHorizontal="14dp"
+                        android:text="Pendientes (24)" android:textColor="@color/state_inactive"
+                        android:background="@color/bg_section" android:paddingHorizontal="14dp"
                         android:paddingVertical="6dp" android:layout_marginEnd="8dp"/>
 
                     <TextView android:id="@+id/subTabEnProceso"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="En proceso (48)" android:textColor="#8899AA"
-                        android:background="#1E2D3D" android:paddingHorizontal="14dp"
+                        android:text="En proceso (48)" android:textColor="@color/state_inactive"
+                        android:background="@color/bg_section" android:paddingHorizontal="14dp"
                         android:paddingVertical="6dp" android:layout_marginEnd="8dp"/>
 
                     <TextView android:id="@+id/subTabCancelados"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="Cancelados (12)" android:textColor="#8899AA"
-                        android:background="#1E2D3D" android:paddingHorizontal="14dp"
+                        android:text="Cancelados (12)" android:textColor="@color/state_inactive"
+                        android:background="@color/bg_section" android:paddingHorizontal="14dp"
                         android:paddingVertical="6dp"/>
                 </LinearLayout>
             </HorizontalScrollView>
@@ -253,7 +253,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mostrando 1-5 de 156 pedidos"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="12sp"
                 android:paddingTop="8dp"/>
         </LinearLayout>

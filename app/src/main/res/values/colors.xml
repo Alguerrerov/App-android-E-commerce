@@ -5,13 +5,34 @@
     <color name="bg_card">#0D2137</color>
     <color name="bg_input">#1E2A45</color>
     <color name="bg_section">#1E2D3D</color>
+    <color name="bg_item">#1A2A3A</color>
+    <color name="bg_avatar">#1E3A5F</color>
+    <color name="bg_badge">#1A4CAF50</color>
+    <color name="bg_bdg">#1A1E90FF</color>
+    <color name="bg_btn">#1877F2</color>
+    <color name="bg_icon">#1A237E</color>
+    <color name="bg_btngreen">#1A5C2A</color>
+    <color name="bg_green">#A4C639</color>
+    <color name="bg_yellow">#FFFF00</color>
+    <color name="bg_f">#66000000</color>
+    <color name="bg_eqn">#44000000</color>
+
 
     <!-- Texto -->
     <color name="text_primary">#FFFFFF</color>
     <color name="text_secondary">#8899AA</color>
+    <color name="text_tertiary">#AAAAAA</color>
+    <color name="text_dark">#000000</color>
+    <color name="text_gray">#666666</color>"
+    <color name="text_light">#F5F5F5</color>
+    <color name="text_darkgray">#444444</color>
+    <color name="text_blue">#1E90FF</color>"
+    <color name="text_green">#1A4CAF50</color>
+
 
     <!-- Acento -->
     <color name="accent_blue">#1E90FF</color>
+    <color name="separator">#2E3D4D</color>
 
     <!-- Estados -->
     <color name="state_active">#4CAF50</color>

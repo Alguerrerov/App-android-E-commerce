@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="#1E2D3D"
+    android:background="@color/bg_section"
     android:padding="14dp"
     android:gravity="center_vertical"
     android:layout_marginBottom="10dp">
@@ -27,7 +27,7 @@
             android:id="@+id/tvTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="13sp"/>
 
@@ -35,7 +35,7 @@
             android:id="@+id/tvVendedor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#8899AA"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp"/>
 
         <LinearLayout
@@ -50,7 +50,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="#8899AA"
+                android:textColor="@color/text_secondary"
                 android:textSize="11sp"/>
 
             <TextView
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="11sp"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="3dp"/>
         </LinearLayout>
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="›"
-        android:textColor="#8899AA"
+        android:textColor="@color/text_secondary"
         android:textSize="20sp"
         android:layout_marginStart="8dp"/>
 

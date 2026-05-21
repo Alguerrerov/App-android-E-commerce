@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:layout_marginEnd="12dp"/>
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Accesibilidad"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -53,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ajustes de accesibilidad"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp"/>
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="4dp"
                 android:layout_marginBottom="24dp">
 
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tamaño de texto"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textSize="14sp"/>
 
                     <TextView
@@ -90,7 +90,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mediano"
-                        android:textColor="#1E90FF"
+                        android:textColor="@color/text_blue"
                         android:textSize="14sp"
                         android:layout_marginEnd="6dp"/>
 
@@ -98,12 +98,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
 
                 <View android:layout_width="match_parent" android:layout_height="1dp"
-                    android:background="#1A2A3A"/>
+                    android:background="@color/bg_item"/>
 
                 <!-- Alto contraste -->
                 <LinearLayout
@@ -123,14 +123,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Alto contraste"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Mejora la visibilidad de la aplicación"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -142,7 +142,7 @@
                 </LinearLayout>
 
                 <View android:layout_width="match_parent" android:layout_height="1dp"
-                    android:background="#1A2A3A"/>
+                    android:background="@color/bg_item"/>
 
                 <!-- Reducir animaciones -->
                 <LinearLayout
@@ -162,14 +162,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Reducir animaciones"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Disminuye el movimiento en la app"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
                     </LinearLayout>
 
@@ -186,7 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Historial de soporte"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp"/>
@@ -195,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="4dp"
                 android:layout_marginBottom="12dp">
 
@@ -227,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Solicitud #SR-1024"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="13sp"/>
 
@@ -235,7 +235,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Resuelta"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="11sp"
                                 android:background="#4CAF50"
                                 android:paddingHorizontal="8dp"
@@ -246,14 +246,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Problema con mi pedido"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="17 May 2024 · 10:30 a.m."
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="11sp"/>
                     </LinearLayout>
 
@@ -261,12 +261,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
 
                 <View android:layout_width="match_parent" android:layout_height="1dp"
-                    android:background="#1A2A3A"/>
+                    android:background="@color/bg_item"/>
 
                 <!-- Solicitud 2 -->
                 <LinearLayout
@@ -296,7 +296,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Solicitud #SR-0987"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textStyle="bold"
                                 android:textSize="13sp"/>
 
@@ -304,7 +304,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="En proceso"
-                                android:textColor="#FFFFFF"
+                                android:textColor="@color/text_primary"
                                 android:textSize="11sp"
                                 android:background="#1E90FF"
                                 android:paddingHorizontal="8dp"
@@ -315,14 +315,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="No puedo iniciar sesión"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="10 May 2024 · 04:15 p.m."
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="11sp"/>
                     </LinearLayout>
 
@@ -330,7 +330,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -342,7 +342,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="16dp"
                 android:clickable="true"
                 android:focusable="true">
@@ -364,7 +364,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contactar soporte"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/text_primary"
                         android:textStyle="bold"
                         android:textSize="14sp"/>
 
@@ -372,7 +372,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Escríbenos por whatsapp o correo"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="12sp"/>
                 </LinearLayout>
 
@@ -380,7 +380,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="›"
-                    android:textColor="#8899AA"
+                    android:textColor="@color/state_inactive"
                     android:textSize="20sp"/>
             </LinearLayout>
 

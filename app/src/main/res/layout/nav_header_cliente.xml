@@ -6,7 +6,7 @@
     android:layout_height="160dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#0A1628"
+    android:background="@color/bg_screen"
     android:padding="20dp">
 
     <LinearLayout
@@ -19,20 +19,20 @@
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:src="@drawable/ic_gear_wrench"
-            app:tint="#1E90FF"
+            app:tint="@color/accent_blue"
             android:layout_marginEnd="6dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Auto"
-            android:textColor="#FFFFFF"
+            android:textColor="text_primary"
             android:textSize="18sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Parts"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="18sp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -41,7 +41,7 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:src="@drawable/ic_person"
-        app:tint="#FFFFFF"
+        app:tint="@color/text_primary"
         android:background="#1E2A45"
         android:padding="10dp"
         android:layout_marginBottom="8dp"/>
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mi cuenta"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text_primary"
         android:textSize="14sp"
         android:textStyle="bold"/>
 </LinearLayout>

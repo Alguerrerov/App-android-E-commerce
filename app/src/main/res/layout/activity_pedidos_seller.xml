@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0D1B2A">
+    android:background="@color/bg_card">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Pedidos"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:textStyle="bold"/>
 
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginHorizontal="16dp"
-        android:background="#1E2D3D"
+        android:background="@color/bg_section"
         android:paddingHorizontal="12dp"
         android:paddingVertical="8dp"
         android:gravity="center_vertical">
@@ -47,8 +47,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Buscar pedidos..."
-            android:textColor="#FFFFFF"
-            android:textColorHint="#8899AA"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/state_inactive"
             android:background="@null"/>
 
         <TextView
@@ -76,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Todos (56)"
-                android:textColor="#1E90FF"
+                android:textColor="@color/accent_blue"
                 android:textSize="13sp"
                 android:paddingBottom="6dp"
                 android:layout_marginEnd="20dp"/>
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pendientes (8)"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"
                 android:paddingBottom="6dp"
                 android:layout_marginEnd="20dp"/>
@@ -96,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="En proceso (16)"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"
                 android:paddingBottom="6dp"
                 android:layout_marginEnd="20dp"/>
@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Completados (32)"
-                android:textColor="#8899AA"
+                android:textColor="@color/state_inactive"
                 android:textSize="13sp"
                 android:paddingBottom="6dp"/>
         </LinearLayout>
@@ -127,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mostrando 1-6 de 56 pedidos"
-        android:textColor="#8899AA"
+        android:textColor="@color/state_inactive"
         android:textSize="12sp"
         android:padding="16dp"/>
 

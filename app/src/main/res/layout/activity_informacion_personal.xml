@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0A1628">
+    android:background="@color/bg_screen">
 
     <!-- Header -->
     <LinearLayout
@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="←"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="22sp"
             android:layout_marginEnd="12dp"/>
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Información personal"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -61,10 +61,10 @@
                     android:layout_height="80dp"
                     android:gravity="center"
                     android:text="X"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="36sp"
                     android:textStyle="bold"
-                    android:background="#E67E22"/>
+                    android:background="@color/state_pending"/>
             </LinearLayout>
 
             <!-- Campos -->
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#0D2137"
+                android:background="@color/bg_card"
                 android:padding="4dp">
 
                 <!-- Nombre -->
@@ -103,15 +103,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Nombre"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
                             android:id="@+id/tvNombre"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Señor X"
-                            android:textColor="#FFFFFF"
+                            android:text="X"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
                     </LinearLayout>
 
@@ -119,11 +119,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Correo -->
                 <LinearLayout
@@ -153,15 +156,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Correo electrónico"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
                             android:id="@+id/tvCorreo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="homeroj.simpson@email.com"
-                            android:textColor="#FFFFFF"
+                            android:text="email.com"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
                     </LinearLayout>
 
@@ -169,11 +172,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Teléfono -->
                 <LinearLayout
@@ -203,7 +209,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Teléfono"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
@@ -211,7 +217,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="123-456789"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
                     </LinearLayout>
 
@@ -219,11 +225,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Fecha nacimiento -->
                 <LinearLayout
@@ -253,7 +262,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Fecha de nacimiento"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
@@ -261,7 +270,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="01/01/2000"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
                     </LinearLayout>
 
@@ -269,11 +278,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
 
-                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1A2A3A"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_item"/>
 
                 <!-- Género -->
                 <LinearLayout
@@ -303,7 +315,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Género"
-                            android:textColor="#8899AA"
+                            android:textColor="@color/state_inactive"
                             android:textSize="12sp"/>
 
                         <TextView
@@ -311,7 +323,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Masculino"
-                            android:textColor="#FFFFFF"
+                            android:textColor="@color/text_primary"
                             android:textSize="14sp"/>
                     </LinearLayout>
 
@@ -319,7 +331,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="›"
-                        android:textColor="#8899AA"
+                        android:textColor="@color/state_inactive"
                         android:textSize="20sp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -332,8 +344,8 @@
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:text="Guardar cambios"
-        android:backgroundTint="#1E90FF"
-        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/text_blue"
+        android:textColor="@color/text_primary"
         android:textStyle="bold"
         android:layout_margin="16dp"/>
 

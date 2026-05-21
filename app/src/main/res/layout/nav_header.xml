@@ -6,7 +6,7 @@
     android:layout_height="180dp"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#0A1628"
+    android:background="@color/bg_screen"
     android:padding="20dp">
 
     <!-- Logo AutoParts -->
@@ -20,20 +20,20 @@
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:src="@drawable/ic_gear_wrench"
-            app:tint="#1E90FF"
+            app:tint="@color/accent_blue"
             android:layout_marginEnd="6dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AUTOPARTS"
-            android:textColor="#1E90FF"
+            android:textColor="@color/accent_blue"
             android:textSize="16sp"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" ADMIN"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="16sp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -43,8 +43,8 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/ic_person"
-        app:tint="#FFFFFF"
-        android:background="#1E2A45"
+        app:tint="@color/text_primary"
+        android:background="@color/bg_input"
         android:padding="10dp"
         android:layout_marginBottom="8dp"/>
 
@@ -52,14 +52,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Admin"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/text_primary"
         android:textSize="15sp"
         android:textStyle="bold"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Administrador"
-        android:textColor="#8899AA"
+        android:textColor="@color/state_inactive"
         android:textSize="12sp"/>
 
 </LinearLayout>

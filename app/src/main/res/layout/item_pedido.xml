@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#1E2D3D"
+    android:background="@color/bg_section"
     android:padding="16dp"
     android:layout_marginBottom="10dp">
 
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="#PED-1058"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="15sp"/>
 
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pendiente"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textSize="11sp"
             android:paddingHorizontal="10dp"
             android:paddingVertical="3dp"/>
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cliente: Juan Pérez"
-        android:textColor="#AAAAAA"
+        android:textColor="@color/text_tertiary"
         android:textSize="12sp"/>
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="16 May 2024 · 10:30 a.m."
-        android:textColor="#AAAAAA"
+        android:textColor="text_tertiary"
         android:textSize="12sp"
         android:layout_marginBottom="8dp"/>
 
@@ -67,14 +67,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="3 productos"
-            android:textColor="#8899AA"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total"
-            android:textColor="#8899AA"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp"
             android:layout_marginEnd="6dp"/>
 
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="S/ 250.00"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/text_primary"
             android:textStyle="bold"
             android:textSize="14sp"/>
     </LinearLayout>
