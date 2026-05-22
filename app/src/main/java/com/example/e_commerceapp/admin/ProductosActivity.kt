@@ -7,25 +7,21 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.e_commerceapp.SupabaseClient
 import com.example.e_commerceapp.model.AgregarProductoActivity
 import com.example.e_commerceapp.model.Producto
 import com.example.e_commerceapp.model.ProductosAdapter
 import com.example.e_commerceapp.databinding.ActivityProductosBinding
-
+import io.github.jan.supabase.postgrest.postgrest
+import kotlinx.coroutines.launch
+import com.example.e_commerceapp.model.ProductoConStock
+import io.github.jan.supabase.postgrest.query.Columns
 class ProductosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProductosBinding
     private lateinit var adapter: ProductosAdapter
-
-    private val productos = listOf(
-        Producto("Filtro de Aceite Mann W610/3", "Filtros", "$27.900", "150", "Activo"),
-        Producto("Pastillas de Freno Brembo P85045", "Frenos", "$89.900", "80", "Activo"),
-        Producto("Aceite Mobil 1 5W-30 Sintético 4L", "Aceites", "$149.900", "60", "Activo"),
-        Producto("Filtro de Aire Mann C29005", "Baterías", "$45.900", "120", "Activo"),
-        Producto("Bujía NGK Iridium BKR6EIX", "Filtros", "$12.900", "200", "Activo"),
-        Producto("Amortiguador Bosch Trasero", "Suspensión", "$189.900", "30", "Inactivo")
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,21 +31,86 @@ class ProductosActivity : AppCompatActivity() {
         setupBuscador()
         setupTabs()
         setupBotones()
+        cargarProductos()
     }
 
     private fun setupRecyclerView() {
-        ProductosAdapter.Companion.productosOriginales = productos
-        adapter = ProductosAdapter(productos) { producto ->
+        adapter = ProductosAdapter(emptyList()) { producto ->
             val intent = Intent(this, DetalleProductoActivity::class.java)
-            intent.putExtra("nombre", producto.nombre)
-            intent.putExtra("categoria", producto.categoria)
-            intent.putExtra("precio", producto.precio)
-            intent.putExtra("stock", producto.stock)
-            intent.putExtra("estado", producto.estado)
+            intent.putExtra("id",            producto.id)
+            intent.putExtra("nombre",        producto.nombre)
+            intent.putExtra("categoria",     producto.categoria)
+            intent.putExtra("precio",        producto.precio)
+            intent.putExtra("stock",         producto.stock)
+            intent.putExtra("estado",        producto.estado)
+            intent.putExtra("marca",         producto.marca)
+            intent.putExtra("descripcion",   producto.descripcion)
+            intent.putExtra("compatibilidad",producto.compatibilidad)
+            intent.putExtra("dimensiones",   producto.dimensiones)
+            intent.putExtra("peso",          producto.peso)
+            intent.putExtra("codigo",        producto.codigo)
+            intent.putExtra("vendedor",      producto.vendedor)
+            intent.putExtra("tienda",        producto.tienda)
             startActivity(intent)
         }
         binding.rvProductos.layoutManager = LinearLayoutManager(this)
         binding.rvProductos.adapter = adapter
+    }
+
+    private fun cargarProductos() {
+        lifecycleScope.launch {
+            try {
+                android.util.Log.d("PRODUCTOS", "Cargando productos...")
+
+                val productosDB = SupabaseClient.client
+                    .postgrest["Productos"]
+                    .select(columns = Columns.raw("*, Stock_tiendas(*)"))
+                    .decodeList<ProductoConStock>()
+
+                android.util.Log.d("PRODUCTOS", "Total: ${productosDB.size}")
+
+                val productos = productosDB.map { p ->
+                    val stockRow = p.stockTienda.firstOrNull()
+                    Producto(
+                        id             = p.id,
+                        nombre         = p.nombre,
+                        categoria      = p.categoria,
+                        descripcion    = p.descripcion,
+                        precio         = "S/ ${p.precio}",
+                        stock          = (stockRow?.stock ?: 0).toString(),
+                        marca          = p.marca,
+                        compatibilidad = p.compatibilidad ?: "",   // null → string vacío
+                        dimensiones    = p.dimensiones    ?: "",
+                        peso           = p.peso           ?: "",
+                        codigo         = p.codigo         ?: "",
+                        foto           = p.foto           ?: "",
+                        estado = if (stockRow?.estado == "Activo") "Activo" else "Inactivo",
+                        vendedor       = "AutoParts",
+                        tienda         = "AutoParts"
+                    )
+                }
+
+                val total     = productos.size
+                val activos   = productos.count { it.estado == "Activo" }
+                val inactivos = productos.count { it.estado == "Inactivo" }
+
+                runOnUiThread {
+                    ProductosAdapter.productosOriginales = productos
+                    adapter.actualizarLista(productos)
+                    binding.tabTodos.text     = "Todos ($total)"
+                    binding.tabActivos.text   = "Activos ($activos)"
+                    binding.tabInactivos.text = "Inactivos ($inactivos)"
+                }
+
+            } catch (e: Exception) {
+                android.util.Log.e("PRODUCTOS", "Error: ${e.message}")
+                runOnUiThread {
+                    android.widget.Toast.makeText(this@ProductosActivity,
+                        "Error al cargar: ${e.message}",
+                        android.widget.Toast.LENGTH_LONG).show()
+                }
+            }
+        }
     }
 
     private fun setupBuscador() {
@@ -87,5 +148,10 @@ class ProductosActivity : AppCompatActivity() {
         binding.btnNuevoProducto.setOnClickListener {
             startActivity(Intent(this, AgregarProductoActivity::class.java))
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        cargarProductos()
     }
 }

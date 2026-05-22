@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_commerceapp.databinding.ActivityAgregarProductoSellerBinding
 
-class jAgregarProductoSellerActivity : AppCompatActivity() {
+class AgregarProductoSellerActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAgregarProductoSellerBinding
 

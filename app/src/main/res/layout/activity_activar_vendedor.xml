@@ -108,7 +108,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Crea tu tienda"
-                            android:textColor="#@color/text_primary"
+                            android:textColor="@color/text_primary"
                             android:textStyle="bold"
                             android:textSize="14sp"/>
 

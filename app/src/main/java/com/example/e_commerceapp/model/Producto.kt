@@ -9,11 +9,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerceapp.R
 
 data class Producto(
-    val nombre:    String,
-    val categoria: String,
-    val precio:    String,
-    val stock:     String,
-    val estado:    String
+    val id: String = "",
+    val nombre: String = "",
+    val categoria: String = "",
+    val descripcion: String = "",
+    val precio: String = "",
+    val stock: String = "",
+    val marca: String = "",
+    val compatibilidad: String = "",
+    val dimensiones: String = "",
+    val peso: String = "",
+    val codigo: String = "",
+    val foto: String = "",
+    val estado: String = "Activo",
+    val vendedor: String = "AutoParts",
+    val tienda: String = "AutoParts"
 )
 
 class ProductosAdapter(
@@ -50,6 +60,11 @@ class ProductosAdapter(
     }
 
     override fun getItemCount() = lista.size
+
+    fun actualizarLista(nuevaLista: List<Producto>) {
+        lista = nuevaLista
+        notifyDataSetChanged()
+    }
 
     fun filtrar(texto: String) {
         lista = if (texto.isEmpty()) productosOriginales

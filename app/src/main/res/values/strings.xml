@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">AutoParts</string>
+    <string name="app_name" translatable="false">AutoParts</string>
+    <string name="name_auto" translatable="false">Auto</string>
+    <string name="name_parts" translatable="false">Parts</string>
+
+    <!-- Formularios -->
+    <string name="label_nombres" translatable="false">Nombres *</string>
+    <string name="label_apellidos" translatable="false">Apellidos *</string>
+    <string name="label_correo" translatable="false">Correo electrónico *</string>
+    <string name="label_telefono" translatable="false">Teléfono *</string>
+    <string name="label_password_temp" translatable="false">Contraseña temporal *</string>
+
+    <!-- Botones -->
+    <string name="btn_guardar" translatable="false">Guardar usuario</string>
+    <string name="btn_cancelar" translatable="false">Cancelar</string>
+    <string name="btn_anterior" translatable="false">Anterior</string>
+    <string name="btn_siguiente" translatable="false">Siguiente</string>
+
+    <!-- Toasts / mensajes -->
+    <string name="msg_producto_guardado" translatable="false">Producto guardado correctamente ✓</string>
+    <string name="msg_campos_obligatorios" translatable="false">Completa todos los campos obligatorios</string>
+    <string name="msg_cuenta_eliminada" translatable="false">Cuenta eliminada</string>
+
+    <!-- Títulos de navegación -->
+    <string name="text_resumen" translatable="false">Resumen</string>
+    <string name="text_productos" translatable="false">Productos</string>
+    <string name="text_clientes" translatable="false">Clientes</string>
+    <!-- etc. -->
 </resources>
