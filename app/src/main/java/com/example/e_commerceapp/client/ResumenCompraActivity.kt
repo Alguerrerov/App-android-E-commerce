@@ -1,9 +1,11 @@
 package com.example.e_commerceapp.client
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_commerceapp.R
@@ -50,19 +52,23 @@ class ResumenCompraActivity : AppCompatActivity() {
         }
     }
 
+    private val pagoLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            Toast.makeText(this, "¡Pedido confirmado! ✓", Toast.LENGTH_LONG).show()
+            finish()
+        }
+    }
+
     private fun setupBotones() {
         binding.btnBack.setOnClickListener { finish() }
 
         binding.btnConfirmar.setOnClickListener {
-            AlertDialog.Builder(this)
-                .setTitle("Confirmar pedido")
-                .setMessage("¿Confirmas tu pedido por S/ ${binding.tvTotal.text}?")
-                .setPositiveButton("Confirmar") { _, _ ->
-                    Toast.makeText(this, "¡Pedido confirmado! ✓", Toast.LENGTH_LONG).show()
-                    finish()
-                }
-                .setNegativeButton("Cancelar", null)
-                .show()
+            val total = productos.sumOf { it.precioUnitario * it.cantidad } + 15.0
+            val intent = Intent(this, PagoWebViewActivity::class.java)
+            intent.putExtra("total", total)
+            pagoLauncher.launch(intent)
         }
     }
 }
