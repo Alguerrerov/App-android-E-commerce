@@ -9,9 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.e_commerceapp.SupabaseClient
 import com.example.e_commerceapp.databinding.ActivityDetalleProductoBinding
-import com.example.e_commerceapp.model.AgregarProductoActivity
+import com.example.e_commerceapp.admin.AgregarProductoActivity
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
+import com.bumptech.glide.Glide
+import com.example.e_commerceapp.R
 
 class DetalleProductoActivity : AppCompatActivity() {
 
@@ -24,6 +26,7 @@ class DetalleProductoActivity : AppCompatActivity() {
     private var precioActual      = ""
     private var stockActual       = ""
     private var descripcionActual = ""
+
 
 
 
@@ -42,6 +45,7 @@ class DetalleProductoActivity : AppCompatActivity() {
         stockActual       = intent.getStringExtra("stock")       ?: ""
         descripcionActual = intent.getStringExtra("descripcion") ?: ""
 
+
         // Llenar UI
         binding.tvNombre.text      = nombreActual
         binding.tvCategoria.text   = "Categoría: $categoriaActual"
@@ -53,6 +57,21 @@ class DetalleProductoActivity : AppCompatActivity() {
         binding.tvCodigo.text      = intent.getStringExtra("codigo") ?: ""
         binding.tvVendidos.text    = "0"
         binding.tvVistas.text      = "0"
+
+        val fotoUrl = intent.getStringExtra("foto") ?: ""
+
+        android.util.Log.d("FOTO_URL", "URL recibida: '$fotoUrl'")
+        if (fotoUrl.isNotEmpty()) {
+            Glide.with(this)
+                .load(fotoUrl)
+                .placeholder(R.drawable.ic_image)
+                .error(R.drawable.ic_image)       // imagen si falla
+                .centerCrop()
+                .into(binding.ivProducto)         // el ImageView del layout
+        }else{
+            android.util.Log.d("FOTO_URL", "No hay foto, mostrando default")
+            binding.ivProducto.setImageResource(R.drawable.ic_image)
+        }
 
         setupBotones()
     }

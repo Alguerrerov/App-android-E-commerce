@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_commerceapp.SupabaseClient
-import com.example.e_commerceapp.model.AgregarProductoActivity
+import com.example.e_commerceapp.admin.AgregarProductoActivity
 import com.example.e_commerceapp.model.Producto
 import com.example.e_commerceapp.model.ProductosAdapter
 import com.example.e_commerceapp.databinding.ActivityProductosBinding
@@ -51,6 +51,7 @@ class ProductosActivity : AppCompatActivity() {
             intent.putExtra("codigo",        producto.codigo)
             intent.putExtra("vendedor",      producto.vendedor)
             intent.putExtra("tienda",        producto.tienda)
+            intent.putExtra("foto", producto.foto)
             startActivity(intent)
         }
         binding.rvProductos.layoutManager = LinearLayoutManager(this)

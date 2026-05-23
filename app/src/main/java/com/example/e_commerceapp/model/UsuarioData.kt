@@ -11,7 +11,15 @@ data class UsuarioData(
     val nombre: String = "",
     val apellido: String = "",
     val correo: String = "",
-    val telefono: String = "",
+    val telefono: String? = null,
+    @SerialName("Genero")
+    val genero: String? = null,
+    @SerialName("DNI")
+    val dni: String? = null,
+    @SerialName("fecha de registro")
+    val fechaRegistro: String? = null,
+    val estado: String? = null,
+    val direccion: String? = null,
     @SerialName("created_at")
     val createdAt: String = ""
 )

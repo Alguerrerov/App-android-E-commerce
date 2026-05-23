@@ -448,7 +448,7 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:text="Editar información"
+                android:text="Modificar"
                 android:textColor="@color/accent_blue"
                 app:icon="@drawable/ic_edit"
                 app:iconTint="@color/accent_blue"

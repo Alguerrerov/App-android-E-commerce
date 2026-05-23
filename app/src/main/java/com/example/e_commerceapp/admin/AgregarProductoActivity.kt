@@ -1,13 +1,17 @@
-package com.example.e_commerceapp.model
+package com.example.e_commerceapp.admin
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.e_commerceapp.SupabaseClient
 import com.example.e_commerceapp.databinding.ActivityAgregarProductoBinding
+import com.example.e_commerceapp.model.ProductoData
+import com.example.e_commerceapp.model.StockTiendasData
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
 
@@ -49,8 +53,10 @@ class AgregarProductoActivity : AppCompatActivity() {
             "Baterías", "Suspensión", "Electricidad",
             "Carrocería", "Escape", "Transmisión"
         )
-        val adapter = ArrayAdapter(this,
-            android.R.layout.simple_dropdown_item_1line, categorias)
+        val adapter = ArrayAdapter(
+            this,
+            R.layout.simple_dropdown_item_1line, categorias
+        )
         binding.spinnerCategoria.setAdapter(adapter)
         binding.spinnerCategoria.threshold = 0  // ← muestra opciones sin escribir nada
 
@@ -144,17 +150,17 @@ class AgregarProductoActivity : AppCompatActivity() {
                     .postgrest["Productos"]
                     .insert(
                         ProductoData(
-                            nombre      = nombre,
-                            categoria   = categoria,
-                            marca       = marca,
-                            precio      = precio.toDoubleOrNull() ?: 0.0,
+                            nombre = nombre,
+                            categoria = categoria,
+                            marca = marca,
+                            precio = precio.toDoubleOrNull() ?: 0.0,
                             descripcion = descripcion,
                         )
                     ) { select() }
                     .decodeSingle<ProductoData>()
 
                 productoIdGenerado = producto.id
-                android.util.Log.d("PRODUCTOS", "Producto creado ID: $productoIdGenerado")
+                Log.d("PRODUCTOS", "Producto creado ID: $productoIdGenerado")
 
                 // Paso 2: insertar en stock_tienda
                 SupabaseClient.client
@@ -162,21 +168,23 @@ class AgregarProductoActivity : AppCompatActivity() {
                     .insert(
                         StockTiendasData(
                             productoId = productoIdGenerado,
-                            tiendaId   = TIENDA_AUTOPARTS_ID,
-                            stock      = stock.toIntOrNull() ?: 0,
-                            estado     = "Activo"
+                            tiendaId = TIENDA_AUTOPARTS_ID,
+                            stock = stock.toIntOrNull() ?: 0,
+                            estado = "Activo"
                         )
                     )
 
-                android.util.Log.d("PRODUCTOS", "Stock asignado a tienda ✓")
+                Log.d("PRODUCTOS", "Stock asignado a tienda ✓")
 
                 runOnUiThread {
                     Toast.makeText(this@AgregarProductoActivity,
                         "Información guardada ✓ Ahora agrega fotos",
                         Toast.LENGTH_SHORT).show()
 
-                    val intent = Intent(this@AgregarProductoActivity,
-                        AgregarProductoFotosActivity::class.java)
+                    val intent = Intent(
+                        this@AgregarProductoActivity,
+                        AgregarProductoFotosActivity::class.java
+                    )
                     intent.putExtra("producto_id", productoIdGenerado)
                     intent.putExtra("nombre",      nombre)
                     intent.putExtra("categoria",   categoria)
@@ -188,7 +196,7 @@ class AgregarProductoActivity : AppCompatActivity() {
                 }
 
             } catch (e: Exception) {
-                android.util.Log.e("PRODUCTOS", "Error: ${e.message}")
+                Log.e("PRODUCTOS", "Error: ${e.message}")
                 runOnUiThread {
                     Toast.makeText(this@AgregarProductoActivity,
                         "Error al guardar: ${e.message}", Toast.LENGTH_LONG).show()

@@ -1,14 +1,15 @@
-package com.example.e_commerceapp.model
+package com.example.e_commerceapp.admin
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.e_commerceapp.SupabaseClient
-import com.example.e_commerceapp.admin.ProductosActivity
 import com.example.e_commerceapp.databinding.ActivityAgregarProductoFotoBinding
 import io.github.jan.supabase.postgrest.postgrest
 import io.github.jan.supabase.storage.storage
@@ -28,7 +29,7 @@ class AgregarProductoFotosActivity : AppCompatActivity() {
         uri?.let {
             fotoUri = it
             binding.cardAgregarFoto.setBackgroundColor(
-                android.graphics.Color.parseColor("#1A1E90FF")
+                Color.parseColor("#1A1E90FF")
             )
             Toast.makeText(this, "Foto seleccionada ✓", Toast.LENGTH_SHORT).show()
         }
@@ -67,7 +68,7 @@ class AgregarProductoFotosActivity : AppCompatActivity() {
     private fun subirFotoYFinalizar() {
         lifecycleScope.launch {
             try {
-                android.util.Log.d("FOTO", "Subiendo foto...")
+                Log.d("FOTO", "Subiendo foto...")
 
                 val uri        = fotoUri ?: return@launch
                 val inputStream = contentResolver.openInputStream(uri) ?: return@launch
@@ -87,7 +88,7 @@ class AgregarProductoFotosActivity : AppCompatActivity() {
                     .from("productos-fotos")
                     .publicUrl(nombreFoto)
 
-                android.util.Log.d("FOTO", "URL: $urlFoto")
+                Log.d("FOTO", "URL: $urlFoto")
 
                 // Actualizar el producto con la URL de la foto
                 SupabaseClient.client.postgrest["Productos"]
@@ -103,7 +104,7 @@ class AgregarProductoFotosActivity : AppCompatActivity() {
                 }
 
             } catch (e: Exception) {
-                android.util.Log.e("FOTO", "Error: ${e.message}")
+                Log.e("FOTO", "Error: ${e.message}")
                 runOnUiThread {
                     Toast.makeText(this@AgregarProductoFotosActivity,
                         "Error al subir foto: ${e.message}",

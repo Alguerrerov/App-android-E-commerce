@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -44,14 +46,15 @@
             android:exported="false"/>
         <!--3.1 admin clientes-->
         <activity android:name=".admin.ClientesActivity" android:exported="false"/>
-        <activity android:name=".auth.AddUserActivity"  android:exported="false"/>
+        <activity android:name=".admin.AddUserActivity"  android:exported="false"/>
         <activity android:name=".admin.DetalleClienteActivity"  android:exported="false"/>
-        <activity android:name=".client.OpcionesClienteActivity" android:exported="false"/>
+        <activity android:name=".admin.EditarUsuarioAdminActivity" android:exported="false"/>
+        <activity android:name=".admin.OpcionesClienteActivity" android:exported="false"/>
         <!--3.2 admin productos-->
         <activity android:name=".admin.ProductosActivity"       android:exported="false"/>
         <activity android:name=".admin.DetalleProductoActivity"  android:exported="false"/>
-        <activity android:name=".model.AgregarProductoActivity"  android:exported="false"/>
-        <activity android:name=".model.AgregarProductoFotosActivity" android:exported="false"/>
+        <activity android:name=".admin.AgregarProductoActivity"  android:exported="false"/>
+        <activity android:name=".admin.AgregarProductoFotosActivity" android:exported="false"/>
         <!--3.3 admin pedidos-->
         <activity android:name=".admin.PedidosAdminActivity" />
         <activity android:name=".admin.DetallePeticionActivity" />
