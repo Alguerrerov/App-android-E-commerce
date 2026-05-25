@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:src="@drawable/ic_products"
-            app:tint="#8899AA"
+            app:tint="@color/state_inactive"
             android:scaleType="centerInside"
             android:background="@color/bg_input"
             android:layout_marginBottom="8dp"/>

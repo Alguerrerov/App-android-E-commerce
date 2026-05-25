@@ -8,9 +8,24 @@
     <string name="label_apellidos" translatable="false">Apellidos *</string>
     <string name="label_correo" translatable="false">Correo electrónico *</string>
     <string name="label_telefono" translatable="false">Teléfono *</string>
+    <string name="label_password" translatable="false">Contraseña *</string>
     <string name="label_password_temp" translatable="false">Contraseña temporal *</string>
+    <string name="label_dni" translatable="false">DNI *</string>
+    <string name="label_fecha_nacimiento" translatable="false">Fecha de nacimiento *</string>
+    <string name="label_rol" translatable="false">Rol *</string>
+    <string name="label_estado" translatable="false">Estado *</string>
+
+    <string name="label_nombre" translatable="false">Nombre *</string>
+    <string name="label_nombre_producto" translatable="false">Nombre del producto *</string>
+    <string name="label_categoria" translatable="false">Categoría *</string>
+    <string name="label_marca" translatable="false">Marca *</string>
+    <string name="label_precio" translatable="false">Precio *</string>
+    <string name="label_stock" translatable="false">Stock *</string>
+    <string name="label_descripcion" translatable="false">Descripción *</string>
+
 
     <!-- Botones -->
+    <string name="btn_registrar" translatable="false">Añadir Usuario</string>
     <string name="btn_guardar" translatable="false">Guardar usuario</string>
     <string name="btn_cancelar" translatable="false">Cancelar</string>
     <string name="btn_anterior" translatable="false">Anterior</string>
@@ -25,5 +40,17 @@
     <string name="text_resumen" translatable="false">Resumen</string>
     <string name="text_productos" translatable="false">Productos</string>
     <string name="text_clientes" translatable="false">Clientes</string>
-    <!-- etc. -->
+    <string name="text_pedidos" translatable="false">Pedidos</string>
+    <string name="text_agregar_producto" translatable="false">Agregar producto</string>"
+
+    <!-- subtitulos -->
+    <string name="text_informacion_personal" translatable="false">Información Personal</string>
+    <string name="text_informacion" translatable="false">Información</string>"
+    <string name="text_informacion_basica" translatable="false">Información Básica</string>
+    <string name="text_rol" translatable="false">Rol del usuario</string>
+    <string name="text_estado" translatable="false">Estado del usuario</string>
+    <string name="text_contraseña" translatable="false">Contraseña</string>
+    <string name="text_foto" translatable="false">Fotos</string>
+
+
 </resources>

@@ -26,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Agregar producto"
+            android:text="@string/text_agregar_producto"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -60,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Información"
+                android:text="@string/text_informacion"
                 android:textColor="@color/accent_blue"
                 android:textSize="10sp"
                 android:layout_marginTop="4dp"/>
@@ -70,7 +70,7 @@
         <View
             android:layout_width="50dp"
             android:layout_height="2dp"
-            android:background="#1E90FF"
+            android:background="@color/accent_blue"
             android:layout_marginHorizontal="6dp"
             android:layout_marginBottom="16dp"/>
 
@@ -93,7 +93,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fotos"
+                android:text="@string/text_foto"
                 android:textColor="@color/state_inactive"
                 android:textSize="10sp"
                 android:layout_marginTop="4dp"/>
@@ -125,7 +125,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Resumen"
+                android:text="@string/text_resumen"
                 android:textColor="@color/state_inactive"
                 android:textSize="10sp"
                 android:layout_marginTop="4dp"/>
@@ -149,7 +149,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Información básica"
+                android:text="@string/text_informacion_basica"
                 android:textColor="@color/accent_blue"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -159,7 +159,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre del producto *"
+                android:text="@string/label_nombre_producto"
                 android:textColor="@color/text_primary"
                 android:textSize="12sp"
                 android:layout_marginBottom="4dp"/>
@@ -186,7 +186,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Categoría *"
+                android:text="@string/label_categoria"
                 android:textColor="@color/text_primary"
                 android:textSize="12sp"
                 android:layout_marginBottom="4dp"/>
@@ -204,7 +204,8 @@
                 android:layout_marginBottom="12dp">
                 <AutoCompleteTextView
                     android:id="@+id/spinnerCategoria"
-                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="none"
                     android:textColor="@color/text_primary"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -213,8 +214,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Marca *"
-                android:textColor="#FFFFFF"
+                android:text="@string/label_marca"
+                android:textColor="@color/text_primary"
                 android:textSize="12sp"
                 android:layout_marginBottom="4dp"/>
             <com.google.android.material.textfield.TextInputLayout
@@ -240,7 +241,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Precio (S/.) *"
+                android:text="@string/label_precio"
                 android:textColor="@color/text_primary"
                 android:textSize="12sp"
                 android:layout_marginBottom="4dp"/>
@@ -268,7 +269,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stock disponible *"
+                android:text="@string/label_stock"
                 android:textColor="@color/text_primary"
                 android:textSize="12sp"
                 android:layout_marginBottom="4dp"/>
@@ -298,7 +299,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Descripción *"
+                android:text="@string/label_descripcion"
                 android:textColor="@color/text_primary"
                 android:textSize="12sp"
                 android:layout_marginBottom="4dp"/>
@@ -334,7 +335,7 @@
         android:id="@+id/btnSiguiente"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:text="Siguiente"
+        android:text="@string/btn_siguiente"
         android:textColor="@color/text_primary"
         android:textSize="15sp"
         android:textStyle="bold"

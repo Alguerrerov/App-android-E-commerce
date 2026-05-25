@@ -80,7 +80,7 @@
                         android:text="Cliente"
                         android:textColor="@color/accent_blue"
                         android:textSize="11sp"
-                        android:background="#1A1E90FF"
+                        android:background="@color/bg_bdg"
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="2dp"/>
                 </LinearLayout>
@@ -173,9 +173,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Historial de pedidos -->
-
-            <!-- Ver direcciones -->
 
             <!-- Bloquear cliente -->
             <androidx.cardview.widget.CardView

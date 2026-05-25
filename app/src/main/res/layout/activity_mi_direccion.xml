@@ -185,7 +185,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="🗑 Eliminar"
-                                android:textColor="#E24B4A"
+                                android:textColor="@color/state_cancelled"
                                 android:textSize="13sp"/>
                         </LinearLayout>
 

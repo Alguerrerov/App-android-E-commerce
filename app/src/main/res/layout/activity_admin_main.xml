@@ -33,7 +33,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Resumen"
+                    android:text="@string/text_resumen"
                     android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
@@ -103,7 +103,7 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardBackgroundColor="#0D2137"
+                        app:cardBackgroundColor="@color/bg_card"
                         app:cardCornerRadius="12dp"
                         android:layout_marginBottom="10dp">
                         <LinearLayout

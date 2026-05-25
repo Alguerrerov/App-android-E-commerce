@@ -97,7 +97,7 @@
                     android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:gravity="center"
-                    android:background="#1E2A45"
+                    android:background="@color/bg_item"
                     android:clickable="true"
                     android:focusable="true"/>
 
@@ -120,7 +120,7 @@
                     android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:gravity="center"
-                    android:background="#1E2A45"
+                    android:background="@color/bg_item"
                     android:clickable="true"
                     android:focusable="true"/>
 

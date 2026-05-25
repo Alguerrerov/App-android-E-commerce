@@ -86,7 +86,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
-                    app:cardBackgroundColor="#0D2137"
+                    app:cardBackgroundColor="@color/bg_card"
                     app:cardCornerRadius="0dp"
                     android:layout_marginBottom="16dp">
                     <FrameLayout
@@ -188,7 +188,7 @@
                             android:layout_height="48dp"
                             android:src="@drawable/ic_gear_wrench"
                             app:tint="@color/accent_blue"
-                            android:background="#0D2137"
+                            android:background="@color/bg_card"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -240,7 +240,7 @@
                             android:layout_height="48dp"
                             android:src="@drawable/ic_suspension"
                             app:tint="@color/state_active"
-                            android:background="#0D2137"
+                            android:background="@color/bg_card"
                             android:padding="10dp"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -473,7 +473,7 @@
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#0A1628"
+        android:background="@color/bg_screen"
         app:headerLayout="@layout/nav_header_cliente"
         app:menu="@menu/menu_cliente_nav"
         app:itemTextColor="@color/text_primary"
